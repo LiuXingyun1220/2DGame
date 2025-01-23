@@ -2,6 +2,7 @@ Library/
 Temp/
 .vscode/
 .vs/
+obj/
 Logs/
 UserSettings/
 Packages/
