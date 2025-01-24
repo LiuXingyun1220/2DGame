@@ -11,3 +11,10 @@ public class ItemDetails
     public string itemDescription;
     public int itemCount;
 }
+
+[System.Serializable]
+public struct InventoryItem
+{
+    public int itemID;
+    public int itemAmount;
+}
