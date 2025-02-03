@@ -12,6 +12,16 @@ namespace MyGame.Inventory
         [Header("±³°üÊý¾Ý")]
         public InventoryBag_SO playerBag;
 
+        private void Start()
+        {
+            EventHandler.CallUpdateInventoryUI(InventoryLocation.Player, playerBag.itemList);
+            //for (int i = 0; i < playerBag.itemList.Count; i++)
+            //{
+            //    Debug.Log(playerBag.itemList[i].itemID);
+            //}
+
+        }
+
         public ItemDetails GetItemDetails(int ID) {
             return itemDataList_SO.itemDetailsList.Find(i=>i.itemID==ID);
         }
@@ -25,6 +35,8 @@ namespace MyGame.Inventory
             {
                 Destroy(item.gameObject);
             }
+
+            EventHandler.CallUpdateInventoryUI(InventoryLocation.Player, playerBag.itemList);
         }
 
         private bool CheckBagCapacit()
