@@ -72,16 +72,43 @@ public class SlotUI : MonoBehaviour,IPointerClickHandler,IBeginDragHandler,IDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+       if(itemAmount != 0)
+        {
+            inventoryUI.dragItem.enabled = true;
+            inventoryUI.dragItem.sprite = slotImage.sprite;
+            inventoryUI.dragItem.SetNativeSize();
+
+            isSelected = true;
+            inventoryUI.UpdateSlotHighlight(slotIndex);
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        inventoryUI.dragItem.transform.position=Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        inventoryUI.dragItem.enabled = false;
+        //Debug.Log(eventData.pointerCurrentRaycast.gameObject);
+
+        if (eventData.pointerCurrentRaycast.gameObject != null)
+        {
+            if (eventData.pointerCurrentRaycast.gameObject.GetComponent<SlotUI>() == null)
+            {
+                return;
+            }
+
+            var targetSlot= eventData.pointerCurrentRaycast.gameObject.GetComponent<SlotUI>();
+            int targetIndex=targetSlot.slotIndex;
+
+            if (slotType == SlotType.Bag && targetSlot.slotType == SlotType.Bag)
+            {
+                InventoryManager.Instance.SwapItem(slotIndex, targetIndex);
+            }
+
+            inventoryUI.UpdateSlotHighlight(-1);
+        }
     }
 }

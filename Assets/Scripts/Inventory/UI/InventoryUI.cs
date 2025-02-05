@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace MyGame.Inventory
 {
     public class InventoryUI : MonoBehaviour
     {
+        [Header("ÍÏ×§Í¼Æ¬")]
+        public Image dragItem;
+        
         [SerializeField] private SlotUI[] playerSlots;
 
         private void OnEnable()
