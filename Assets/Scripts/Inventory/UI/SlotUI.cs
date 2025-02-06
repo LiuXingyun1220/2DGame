@@ -110,5 +110,11 @@ public class SlotUI : MonoBehaviour,IPointerClickHandler,IBeginDragHandler,IDrag
 
             inventoryUI.UpdateSlotHighlight(-1);
         }
+        else
+        {
+            var pos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
+
+            EventHandler.CallInstantiateItemInScene(itemDetails.itemID, pos);
+        }
     }
 }
