@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 namespace MyGame.Inventory {
     public class Item : MonoBehaviour
@@ -42,6 +43,25 @@ namespace MyGame.Inventory {
                 coll.size = newSize;
                 coll.offset = new Vector2(0, spriteRenderer.sprite.bounds.center.y);
             }
+
+            //根据类型初始化组件
+            switch (itemDetails.itemType)
+            {
+                case ItemType.Fire:
+                    gameObject.AddComponent<FireBehaviour>();
+                    break;
+                case ItemType.Water:
+                    gameObject.AddComponent<WaterBehaviour>();
+                    break;
+            }
+
+        }
+
+        private void AddFireComponent()
+        {
+            
+            
+            Debug.Log("火堆组件已添加");
         }
     }
 }

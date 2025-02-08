@@ -8,6 +8,7 @@ namespace MyGame.Inventory
     {
         public Item itemPrefab;
         private Transform itemParent;
+        private ItemDetails itemDetails;
 
         private void OnEnable()
         {
@@ -26,7 +27,6 @@ namespace MyGame.Inventory
 
         private void OnInstantiateItemInScene(int ID,Vector3 pos)
         {
-            Debug.Log("…˙≥…¡À");
             var item = Instantiate(itemPrefab, pos, Quaternion.identity,itemParent);
             item.itemID = ID;
         }

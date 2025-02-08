@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2602834238417570216}
   m_Layer: 0
   m_Name: ItemBase
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 0
+  itemType: 0
 --- !u!1 &7351841484082227993
 GameObject:
   m_ObjectHideFlags: 0
