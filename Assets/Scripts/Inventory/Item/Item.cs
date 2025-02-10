@@ -53,6 +53,7 @@ namespace MyGame.Inventory {
                 case ItemType.Water:
                     gameObject.AddComponent<WaterBehaviour>();
                     break;
+
             }
 
         }

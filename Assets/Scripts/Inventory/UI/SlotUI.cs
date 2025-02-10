@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using MyGame.Inventory;
+using static UnityEditor.Progress;
 
 public class SlotUI : MonoBehaviour,IPointerClickHandler,IBeginDragHandler,IDragHandler,IEndDragHandler
 {
@@ -115,6 +116,8 @@ public class SlotUI : MonoBehaviour,IPointerClickHandler,IBeginDragHandler,IDrag
             var pos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
 
             EventHandler.CallInstantiateItemInScene(itemDetails.itemID, pos);
+
+            InventoryManager.Instance.RemoveItem(itemDetails.itemID, 1);
         }
     }
 }

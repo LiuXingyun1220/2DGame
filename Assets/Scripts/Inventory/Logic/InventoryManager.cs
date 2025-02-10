@@ -102,6 +102,57 @@ namespace MyGame.Inventory
 
             EventHandler.CallUpdateInventoryUI(InventoryLocation.Player, playerBag.itemList);
         }
+
+        // 在你的 InventoryManager 类中添加以下方法
+
+        /// <summary>
+        /// 减少指定物品数量
+        /// </summary>
+        /// <param name="itemID">物品ID</param>
+        /// <param name="amount">减少数量（必须>0）</param>
+        /// <returns>是否成功减少（若物品不存在或数量不足返回false）</returns>
+        public bool RemoveItem(int itemID, int amount)
+        {
+            if (amount <= 0)
+            {
+                //Debug.LogError("减少数量必须大于0");
+                return false;
+            }
+
+            int index = GetItemIndexInBag(itemID);
+            if (index == -1)
+            {
+                //Debug.LogWarning($"背包中不存在物品ID: {itemID}");
+                return false;
+            }
+
+            InventoryItem item = playerBag.itemList[index];
+            if (item.itemAmount < amount)
+            {
+                //Debug.LogWarning($"物品ID {itemID} 数量不足，当前数量：{item.itemAmount}，尝试减少：{amount}");
+                return false;
+            }
+
+            // 执行数量减少
+            int newAmount = item.itemAmount - amount;
+            if (newAmount <= 0)
+            {
+                // 数量归零时清空物品槽
+                playerBag.itemList[index] = new InventoryItem();
+            }
+            else
+            {
+                playerBag.itemList[index] = new InventoryItem
+                {
+                    itemID = itemID,
+                    itemAmount = newAmount
+                };
+            }
+
+            // 更新UI
+            EventHandler.CallUpdateInventoryUI(InventoryLocation.Player, playerBag.itemList);
+            return true;
+        }
     }
 
 }
