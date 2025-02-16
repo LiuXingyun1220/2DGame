@@ -125,10 +125,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c547c509162afe4c98f12f6e63ab56d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySlider: {fileID: 0}
   startPositionText: {fileID: 8322843184301134243}
   endPositionText: {fileID: 2053075040626193587}
   widthText: {fileID: 9016114208222171685}
-  hightText: {fileID: 2382308660587715502}
+  heightText: {fileID: 0}
 --- !u!1 &754965535505478058
 GameObject:
   m_ObjectHideFlags: 0

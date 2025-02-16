@@ -372,8 +372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44fc1709910c6845a0bcd193f0fde35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TopViewButton: {fileID: 4350370206661291939}
-  SectionalViewButton: {fileID: 1170429555483101589}
 --- !u!1 &4311637148254633851
 GameObject:
   m_ObjectHideFlags: 0
