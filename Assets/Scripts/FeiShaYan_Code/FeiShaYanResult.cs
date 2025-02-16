@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Result : MonoBehaviour
+public class FeiShaYanResult : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,7 +15,7 @@ public class Result : MonoBehaviour
     void Update()
     {
         //³É¹¦
-        if (SceneManager.GetActiveScene().name == GameManager.SucceedScene)
+        if (SceneManager.GetActiveScene().name == FeiShaYanManager.SucceedScene)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -23,11 +23,11 @@ public class Result : MonoBehaviour
             }
         }
         //Ê§°Ü
-        if (SceneManager.GetActiveScene().name == GameManager.DefeatScene)
+        if (SceneManager.GetActiveScene().name == FeiShaYanManager.DefeatScene)
         {
             if (Input.GetMouseButtonDown(0))
             {
-                SceneManager.LoadScene(GameManager.TopViewScene);
+                SceneManager.LoadScene(FeiShaYanManager.TopViewScene);
             }
         }
     }

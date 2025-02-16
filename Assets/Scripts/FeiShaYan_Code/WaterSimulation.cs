@@ -18,18 +18,18 @@ public class WaterSimulation : MonoBehaviour
     {
         // 根据堰体参数计算流速
         currentFlowRate = CalculateFlowRate(
-            GameManager.Height - GameManager.GetHeightData(),
-            GameManager.GetWidthData()
+            FeiShaYanManager.Height - FeiShaYanManager.GetHeightData(),
+            FeiShaYanManager.GetWidthData()
         );
 
         // 计算泥沙冲刷量（Stokes定律简化）
         sedimentErosionRate = Mathf.Pow(currentFlowRate, 1.5f) * 0.02f;
-        GameManager.SetSedimentErosionRateData(sedimentErosionRate);
+        FeiShaYanManager.SetSedimentErosionData(sedimentErosionRate);
         Debug.Log($"泥沙冲刷量为{sedimentErosionRate}");
 
         // 计算灌溉供水量
         irrigationSupply = baseFlowRate - currentFlowRate * 0.3f;
-        GameManager.SetIrrigationData(-irrigationSupply);
+        FeiShaYanManager.SetIrrigationData(-irrigationSupply);
         Debug.Log($"灌溉供水量为{-irrigationSupply}");
     }
 

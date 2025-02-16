@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 namespace MyGame.Inventory {
@@ -32,6 +33,10 @@ namespace MyGame.Inventory {
                     if (item != null) { 
                         InventoryManager.Instance.AddItem(item,true);
                     }
+                    break;
+                case "Teleport":
+                    var teleport = clickObject.GetComponent<Teleport>();
+                    teleport.TeleportToScene();
                     break;
             }
         }

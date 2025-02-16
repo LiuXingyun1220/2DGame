@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public static class GameManager
+public static class FeiShaYanManager
 {
     private static Vector2 start;//Æðµã
     private static Vector2 end;//ÖÕµã
@@ -56,11 +56,11 @@ public static class GameManager
     {
         return irrigationSupply;
     }
-    public static void SetSedimentErosionRateData(float sedimentErosion)
+    public static void SetSedimentErosionData(float sedimentErosion)
     {
         sedimentErosionRate = sedimentErosion;
     }
-    public static float GetSedimentErosionRateData()
+    public static float GetSedimentErosionData()
     {
         return sedimentErosionRate;
     }
