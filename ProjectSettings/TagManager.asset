@@ -7,6 +7,7 @@ TagManager:
   - Item
   - ItemParent
   - Rock
+  - Fulcrum
   layers:
   - Default
   - TransparentFX
