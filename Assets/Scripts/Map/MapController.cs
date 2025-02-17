@@ -13,6 +13,7 @@ public class MapController : MonoBehaviour
     {
         if(targetImage.name == "Map1")
         {
+            MapManager.SetMap1Condition(true);
             isConditionMet = MapManager.GetMap1Condition();
         }
         else if(targetImage.name == "Map2")
@@ -43,15 +44,10 @@ public class MapController : MonoBehaviour
     {
         if (targetImage != null)
         {
-            // 如果是Sprite Renderer，启用渲染
+            // 渲染
             if (targetImage.TryGetComponent<SpriteRenderer>(out var spriteRenderer))
             {
                 spriteRenderer.enabled = true;
-            }
-            // 如果是UI Image，启用GameObject
-            else
-            {
-                targetImage.SetActive(true);
             }
         }
     }
@@ -61,15 +57,10 @@ public class MapController : MonoBehaviour
     {
         if (targetImage != null)
         {
-            // 如果是Sprite Renderer，禁用渲染
+            // 渲染
             if (targetImage.TryGetComponent<SpriteRenderer>(out var spriteRenderer))
             {
                 spriteRenderer.enabled = false;
-            }
-            // 如果是UI Image，禁用GameObject
-            else
-            {
-                targetImage.SetActive(false);
             }
         }
     }

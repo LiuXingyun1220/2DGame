@@ -19,15 +19,12 @@ public class MountainMove : MonoBehaviour
         {
             imageRectTransform = GetComponent<RectTransform>();
         }
-
-        // Optionally, you can set default positions based on the Canvas size
-        // Here we assume the canvas is set up in a way that min/max positions are valid
     }
 
     void Update()
     {
         // Calculate the interpolated position based on slider value
-        float t = slider.value;
+        float t = slider.value / 5;
         Vector2 newPosition = Vector2.Lerp(minPosition, maxPosition, t);
 
         // Set the new position to the Image's RectTransform
