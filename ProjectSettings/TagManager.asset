@@ -8,6 +8,8 @@ TagManager:
   - ItemParent
   - Rock
   - Fulcrum
+  - Stone
+  - Lever
   layers:
   - Default
   - TransparentFX
