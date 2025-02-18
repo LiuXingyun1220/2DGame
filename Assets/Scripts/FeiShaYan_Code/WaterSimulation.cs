@@ -6,8 +6,7 @@ using UnityEngine;
 public class WaterSimulation : MonoBehaviour
 {
     [Header("基础参数")]
-    public const float baseFlowRate = 5f;  // 基础流量（m³/s）
-    public const float sedimentDensity = 1600f; // 泥沙密度（kg/m³）
+    public const float baseFlowRate = 468f;  // 基础流量（m³/s）
 
     [Header("实时数据")]
     private float currentFlowRate;
@@ -29,8 +28,8 @@ public class WaterSimulation : MonoBehaviour
 
         // 计算灌溉供水量
         irrigationSupply = baseFlowRate - currentFlowRate * 0.3f;
-        FeiShaYanManager.SetIrrigationData(-irrigationSupply);
-        Debug.Log($"灌溉供水量为{-irrigationSupply}");
+        FeiShaYanManager.SetIrrigationData(irrigationSupply);
+        Debug.Log($"灌溉供水量为{irrigationSupply}");
     }
 
     float CalculateFlowRate(float height, float width)
