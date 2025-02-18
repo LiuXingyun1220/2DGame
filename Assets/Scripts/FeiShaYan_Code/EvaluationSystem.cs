@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,41 +11,41 @@ public class EvaluationSystem : MonoBehaviour
     [System.Serializable]
     public class HistoricalData
     {
-        public float optimalHeight = 2.1f;
+        public float optimalHeight = 2.15f;
         public float optimalWidth = 240f;
-        public float minIrrigation = 100f;
-        public float minSedimentErosion = 100f;
-        public Vector2 realpoint = new Vector2(4.0f, 6.0f);
+        public float minIrrigation = 300f;
+        public float minSedimentErosion = 140f;
+        public Vector2 realpoint = new Vector2(4.15f, 2.2f);
     }
 
     public HistoricalData realData;
 
     public void EvaluatePerformance()
     {
-        float heightScore = Mathf.Clamp01(
-            1 - Mathf.Abs(FeiShaYanManager.GetHeightData() - realData.optimalHeight) / 0.5f
-        );
-
-        float widthScore = Mathf.Clamp01(
-            1 - Mathf.Abs(FeiShaYanManager.GetWidthData() - realData.optimalWidth) / 3f
-        );
-
+        FeiShaYanManager.SetHeightScore(Mathf.Clamp01(
+            1 - Mathf.Abs(FeiShaYanManager.GetHeightData() - realData.optimalHeight) / 4.88f
+        ));
+        
+        FeiShaYanManager.SetWidthScore(Mathf.Clamp01(
+            1 - Mathf.Abs(FeiShaYanManager.GetWidthData() - realData.optimalWidth) / 850f
+        ));
+        
         Vector2 midpoint = (FeiShaYanManager.GetStartPosData() + FeiShaYanManager.GetEndPosData()) * 0.5f;
         float distance = Vector2.Distance(realData.realpoint, midpoint);
-        float distanceScore = distance < 1f ? 1 : 0;
-
-        float irrigationScore = (FeiShaYanManager.GetIrrigationData() > realData.minIrrigation) ? 1 : 0;
-
-        float sedimentErosionScore = (FeiShaYanManager.GetSedimentErosionData() > realData.minSedimentErosion) ? 1 : 0;
-
-        float totalScore = (heightScore * 0.2f + widthScore * 0.2f + distanceScore*0.2f + irrigationScore * 0.2f + sedimentErosionScore * 0.2f) * 100f;
+        FeiShaYanManager.SetDistanceScore(distance*FeiShaYanManager.WidthRate < 100f ? 1 : 0);
+       
+        FeiShaYanManager.SetIrrigationScore((FeiShaYanManager.GetIrrigationData() > realData.minIrrigation) ? 1 : 0);
+        
+        FeiShaYanManager.SetSedimentErosionScore((FeiShaYanManager.GetSedimentErosionData() > realData.minSedimentErosion) ? 1 : 0);
+        
+        float totalScore = (FeiShaYanManager.GetHeightScore() * 0.2f + FeiShaYanManager.GetWidthScore() * 0.2f + FeiShaYanManager.GetDistanceScore() * 0.1f + FeiShaYanManager.GetIrrigationScore() * 0.25f + FeiShaYanManager.GetSedimentErosionScore() * 0.25f) * 100f;
         Debug.Log(totalScore);
 
         Scene TopViewScene = SceneManager.GetSceneByName(FeiShaYanManager.TopViewScene);
         Scene SectionalViewScene = SceneManager.GetSceneByName(FeiShaYanManager.SectionalViewScene);
         if (TopViewScene.IsValid())
         {
-            if (totalScore > 75)
+            if (totalScore > 60)
             {
                 //成功
                 ChangeScene(FeiShaYanManager.TopViewScene, FeiShaYanManager.SucceedScene);
@@ -57,7 +58,7 @@ public class EvaluationSystem : MonoBehaviour
         }
         else if (SectionalViewScene.IsValid())
         {
-            if (totalScore > 75)
+            if (totalScore > 60)
             {
                 //成功
                 ChangeScene(FeiShaYanManager.SectionalViewScene, FeiShaYanManager.SucceedScene);

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MountainMove : MonoBehaviour
@@ -7,6 +8,7 @@ public class MountainMove : MonoBehaviour
     public RectTransform imageRectTransform;  // Reference to the Image's RectTransform
     public Vector2 minPosition;  // Minimum position of the image
     public Vector2 maxPosition;  // Maximum position of the image
+    private float t;
 
     void Start()
     {
@@ -23,8 +25,16 @@ public class MountainMove : MonoBehaviour
 
     void Update()
     {
+        Scene scene = SceneManager.GetSceneByName(FeiShaYanManager.SectionalViewScene);
+        if (scene.IsValid())
+        {
+            t = slider.value / 5;
+        }
+        else
+        {
+            t = FeiShaYanManager.GetHeightData() / 5;
+        }
         // Calculate the interpolated position based on slider value
-        float t = slider.value / 5;
         Vector2 newPosition = Vector2.Lerp(minPosition, maxPosition, t);
 
         // Set the new position to the Image's RectTransform

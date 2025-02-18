@@ -18,10 +18,14 @@ public class ButtonClick : MonoBehaviour
 
     public void ChangeLoad(string to)
     {
-        AsyncOperation loadOp = SceneManager.LoadSceneAsync(to, LoadSceneMode.Additive);
+        Scene scene = SceneManager.GetSceneByName(to);
+        if(!scene.IsValid() || !scene.isLoaded)
+        {
+            AsyncOperation loadOp = SceneManager.LoadSceneAsync(to, LoadSceneMode.Additive);
 
-        // 添加一个协程来等待加载完成
-        StartCoroutine(WaitForSceneToLoad(loadOp));
+            // 添加一个协程来等待加载完成
+            StartCoroutine(WaitForSceneToLoad(loadOp));
+        }
     }
 
     private IEnumerator WaitForSceneToLoad(AsyncOperation op)

@@ -16,6 +16,12 @@ public static class FeiShaYanManager
     public const string SucceedScene = "Succeed";//成功场景
     public const string DefeatScene = "Defeat";//失败场景
     public const float Height = 4.88f;//轴长
+    public const float WidthRate = 140;//调整宽度比例
+    private static float heightScore;
+    private static float widthScore;
+    private static float distanceScore;
+    private static float irrigationScore;
+    private static float sedimentErosionScore;
     public static void SetStartPosData(Vector2 startPos)
     {
         start = startPos;
@@ -34,7 +40,7 @@ public static class FeiShaYanManager
     }
     public static void SetWidthData(float width)
     {
-        weirWidth = width*83;
+        weirWidth = width*WidthRate;
     }
     public static float GetWidthData()
     {
@@ -63,5 +69,45 @@ public static class FeiShaYanManager
     public static float GetSedimentErosionData()
     {
         return sedimentErosionRate;
+    }
+    public static void SetWidthScore(float widthscore)
+    {
+        widthScore = widthscore;
+    }
+    public static float GetWidthScore()
+    {
+        return widthScore;
+    }
+    public static void SetHeightScore(float heightscore)
+    {
+        heightScore = heightscore;
+    }
+    public static float GetHeightScore()
+    {
+        return heightScore;
+    }
+    public static void SetDistanceScore(float distancescore)
+    {
+        distanceScore = distancescore;
+    }
+    public static float GetDistanceScore()
+    {
+        return distanceScore;
+    }
+    public static void SetIrrigationScore(float irrigationscore)
+    {
+        irrigationScore = irrigationscore;
+    }
+    public static float GetIrrigationScore()
+    {
+        return irrigationScore;
+    }
+    public static void SetSedimentErosionScore(float sedimentErosionscore)
+    {
+        sedimentErosionScore = sedimentErosionscore;
+    }
+    public static float GetSedimentErosionScore()
+    {
+        return sedimentErosionScore;
     }
 }
