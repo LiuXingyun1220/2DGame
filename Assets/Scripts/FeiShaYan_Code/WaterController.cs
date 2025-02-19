@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class SpriteController : MonoBehaviour
+public class WaterController : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer; // 引用SpriteRenderer组件
+    public SpriteRenderer waterSpriteRenderer; // 引用SpriteRenderer组件
     private const float rate = 3.8f;// 用于调整河流宽度
     private Vector2 locationChange = new Vector2(0.6f,0.3f);// 用于调整图像位置
     private void Update()
     {
         // 获取Transform组件
-        Transform transform = spriteRenderer.transform;
+        Transform transform = waterSpriteRenderer.transform;
         // 设置位置（在世界坐标系中）
         transform.position = FeiShaYanManager.GetStartPosData() - locationChange;
         // 设置缩放
