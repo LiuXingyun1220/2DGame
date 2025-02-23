@@ -8,8 +8,8 @@ public class ResultTextController : MonoBehaviour
 {
     public TextMeshProUGUI sedimentErosionRateText;//泥沙冲刷量
     public TextMeshProUGUI irrigationSupplyText;//灌溉供水量
-    public TextMeshProUGUI reasonText;//灌溉供水量
-    public TextMeshProUGUI adviseText;//灌溉供水量
+    public TextMeshProUGUI reasonText;
+    public TextMeshProUGUI adviseText;
     // Start is called before the first frame updated
     void Start()
     {
@@ -28,15 +28,15 @@ public class ResultTextController : MonoBehaviour
             }
             if (FeiShaYanManager.GetWidthScore() < 0.6)
             {
-                adviseText.text += "修改宽度";
+                adviseText.text += "修改宽度 ";
             }
             if (FeiShaYanManager.GetHeightScore() < 0.6)
             {
-                adviseText.text += "修改高度";
+                adviseText.text += "修改高度 ";
             }
             if (FeiShaYanManager.GetDistanceScore() == 0)
             {
-                adviseText.text += "调整位置";
+                adviseText.text += "调整位置 ";
             }
         }
     }

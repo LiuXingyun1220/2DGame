@@ -14,6 +14,6 @@ public class WaterController : MonoBehaviour
         // 设置缩放
         transform.localScale = new Vector3(0.7f, FeiShaYanManager.GetWidthData()/(FeiShaYanManager.WidthRate * rate), 0.7f); // 注意Z轴通常保持为1，除非你有特殊需求
         // 设置旋转（以度为单位）
-        transform.rotation = Quaternion.Euler(0f, 0f, -22.5f); // 例如，绕Z轴旋转45度
+        transform.rotation = Quaternion.Euler(0f, 0f, -20f); 
     }
 }

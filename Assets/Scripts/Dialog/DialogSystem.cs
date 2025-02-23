@@ -23,6 +23,7 @@ public class DialogSystem : MonoBehaviour
     //头像
     public Sprite LiErlang;
     public Sprite LiBing;
+    public Sprite Physicist;
 
     int index;
     public float textSpeed;// 文字播放速度
@@ -99,8 +100,13 @@ public class DialogSystem : MonoBehaviour
                 nameLabel.text = textList[index];
                 index++;
                 break;
+            case "物理学家":
+                OtherLocation();
+                avatar.sprite = Physicist;
+                nameLabel.text = textList[index];
+                index++;
+                break;
             default:
-                Debug.Log(textList[index]);
                 break;
         }
 
@@ -133,7 +139,7 @@ public class DialogSystem : MonoBehaviour
     {
         dialogBoxTransform.eulerAngles = new Vector3(0, -180, 0);
         avatarTransform.position = new Vector3(345, -15, 0) + offset;
-        textTransform.position = new Vector3(-75, -130, 0) + offset;
+        textTransform.position = new Vector3(-60, -130, 0) + offset;
         nameTransform.position = new Vector3(210, -55, 0) + offset;
     }
 }

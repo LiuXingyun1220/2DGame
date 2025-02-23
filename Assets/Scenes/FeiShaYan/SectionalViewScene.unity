@@ -707,6 +707,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas BackGround
       objectReference: {fileID: 0}
+    - target: {fileID: 732392236119929954, guid: dc8da0c290f46ba4c92cc07799b01461, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2091789803960891681, guid: dc8da0c290f46ba4c92cc07799b01461, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -717,7 +721,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 54bd58e73c4c07f49a492675345c5e99, type: 3}
     - target: {fileID: 4795268693378419307, guid: dc8da0c290f46ba4c92cc07799b01461, type: 3}
       propertyPath: m_Name
-      value: Water
+      value: SectionalView_Water
       objectReference: {fileID: 0}
     - target: {fileID: 5829427901975537407, guid: dc8da0c290f46ba4c92cc07799b01461, type: 3}
       propertyPath: m_AnchorMax.y
@@ -745,27 +749,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7629328629033533666, guid: dc8da0c290f46ba4c92cc07799b01461, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 97.707
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7629328629033533666, guid: dc8da0c290f46ba4c92cc07799b01461, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 98.989
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 7629328629033533666, guid: dc8da0c290f46ba4c92cc07799b01461, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0024596
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7629328629033533666, guid: dc8da0c290f46ba4c92cc07799b01461, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.78338957
+      value: 1.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 7629328629033533666, guid: dc8da0c290f46ba4c92cc07799b01461, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7629328629033533666, guid: dc8da0c290f46ba4c92cc07799b01461, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000083923
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7629328629033533666, guid: dc8da0c290f46ba4c92cc07799b01461, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -11.204
+      value: -12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -774,8 +782,37 @@ PrefabInstance:
     - {fileID: 8603695069270412198, guid: dc8da0c290f46ba4c92cc07799b01461, type: 3}
     - {fileID: 8048387061835182123, guid: dc8da0c290f46ba4c92cc07799b01461, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4795268693378419307, guid: dc8da0c290f46ba4c92cc07799b01461, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2642629304240571956}
   m_SourcePrefab: {fileID: 100100000, guid: dc8da0c290f46ba4c92cc07799b01461, type: 3}
+--- !u!1 &2642629304240571955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4795268693378419307, guid: dc8da0c290f46ba4c92cc07799b01461, type: 3}
+  m_PrefabInstance: {fileID: 2642629304240571954}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2642629304240571956
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2642629304240571955}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a6a822535ba0b73438fe71e6279ddd5e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

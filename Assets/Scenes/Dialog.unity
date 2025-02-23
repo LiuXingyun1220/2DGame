@@ -225,6 +225,7 @@ MonoBehaviour:
   textFile: {fileID: 4900000, guid: cf7b420e05fc042488dc3bb8974a8c50, type: 3}
   LiErlang: {fileID: 21300000, guid: 66fb51edcfd964c40a75e564f27f4876, type: 3}
   LiBing: {fileID: 21300000, guid: 061abb21f36e59c4692824a5bef4a108, type: 3}
+  Physicist: {fileID: 21300000, guid: 8e2c05a57b329f84d87b50a074744ccc, type: 3}
   textSpeed: 0.1
 --- !u!1 &1083440984
 GameObject:
