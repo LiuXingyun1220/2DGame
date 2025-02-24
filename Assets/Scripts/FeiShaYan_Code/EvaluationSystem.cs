@@ -48,6 +48,7 @@ public class EvaluationSystem : MonoBehaviour
             if (totalScore > 60)
             {
                 //成功
+                MapManager.SetMap4Condition(true);
                 ChangeScene(FeiShaYanManager.TopViewScene, FeiShaYanManager.SucceedScene);
             }
             else
@@ -61,6 +62,7 @@ public class EvaluationSystem : MonoBehaviour
             if (totalScore > 60)
             {
                 //成功
+                MapManager.SetMap4Condition(true);
                 ChangeScene(FeiShaYanManager.SectionalViewScene, FeiShaYanManager.SucceedScene);
             }
             else

@@ -56,7 +56,7 @@ public class Controller : MonoBehaviour
             {
                 end = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 width = Vector2.Distance(start, end);
-                if (width > 1)
+                if (width > 1 && width < 5)
                 {
                     FeiShaYanManager.SetStartPosData(start);
                     startPositionText.text = $"{FeiShaYanManager.GetStartPosData()}";

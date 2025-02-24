@@ -765,7 +765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeCanvasGroup: {fileID: 18439425}
-  fadeDuration: 0.2
+  fadeDuration: 0.3
 --- !u!4 &1810795112
 Transform:
   m_ObjectHideFlags: 0
