@@ -230,7 +230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &519420029
 AudioListener:
   m_ObjectHideFlags: 0
@@ -646,12 +646,12 @@ GameObject:
   - component: {fileID: 1651045798}
   - component: {fileID: 1651045797}
   m_Layer: 5
-  m_Name: FadeCanvas
+  m_Name: //FadeCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1651045797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -785,10 +785,10 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 1410055705}
   - {fileID: 1575457574}
   - {fileID: 1810795112}
   - {fileID: 1651045800}
   - {fileID: 621051782}
-  - {fileID: 519420032}

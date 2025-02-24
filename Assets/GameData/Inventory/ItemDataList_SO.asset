@@ -16,14 +16,21 @@ MonoBehaviour:
   - itemID: 1001
     itemName: "\u706B\u7130"
     itemType: 1
-    itemIcon: {fileID: 21300000, guid: 967cc7f8afb724dd0915a57883580633, type: 3}
-    itemOnWorldSprite: {fileID: 21300000, guid: 967cc7f8afb724dd0915a57883580633, type: 3}
+    itemIcon: {fileID: 21300000, guid: c375ce4395ef6e941969944ff66ebccf, type: 3}
+    itemOnWorldSprite: {fileID: 21300000, guid: c375ce4395ef6e941969944ff66ebccf, type: 3}
     itemDescription: "\u7528\u4E8E\u52A0\u70ED\u5CA9\u77F3\u3002"
     itemCount: 0
   - itemID: 1002
     itemName: "\u6E05\u6C34"
     itemType: 2
-    itemIcon: {fileID: 21300000, guid: 5b98b5b289f8549f9bbd017e5f0aa5c7, type: 3}
-    itemOnWorldSprite: {fileID: 21300000, guid: 5b98b5b289f8549f9bbd017e5f0aa5c7, type: 3}
+    itemIcon: {fileID: 21300000, guid: 35c7e9b7b93beee4a8147a7c06f68ca2, type: 3}
+    itemOnWorldSprite: {fileID: 21300000, guid: 35c7e9b7b93beee4a8147a7c06f68ca2, type: 3}
     itemDescription: "\u7528\u4E8E\u7ED9\u5CA9\u77F3\u964D\u6E29\u3002"
+    itemCount: 0
+  - itemID: 1002
+    itemName: NEW ITEM
+    itemType: 0
+    itemIcon: {fileID: 21300000, guid: 4599790dfe1f3ac4fbc327408def04e3, type: 3}
+    itemOnWorldSprite: {fileID: 21300000, guid: 4599790dfe1f3ac4fbc327408def04e3, type: 3}
+    itemDescription: 
     itemCount: 0

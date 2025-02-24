@@ -8,6 +8,7 @@ public class FireBehaviour : MonoBehaviour
         // 检查是否与岩石发生碰撞
         if (other.CompareTag("Rock"))
         {
+            Debug.Log("碰撞了");
             RockBehaviour rock = other.GetComponent<RockBehaviour>();
             if (rock != null)
             {

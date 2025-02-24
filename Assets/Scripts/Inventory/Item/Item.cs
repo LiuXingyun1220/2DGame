@@ -57,13 +57,6 @@ namespace MyGame.Inventory {
             }
 
         }
-
-        private void AddFireComponent()
-        {
-            
-            
-            Debug.Log("火堆组件已添加");
-        }
     }
 }
 
