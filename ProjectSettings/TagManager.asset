@@ -4,12 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Item
   - ItemParent
   - Rock
   - Fulcrum
   - Stone
   - Lever
+=======
+  - Ball
+>>>>>>> d0dc4dfe062b11bd11d6641966c633f7bab30c98
   layers:
   - Default
   - TransparentFX
@@ -17,7 +21,11 @@ TagManager:
   - 
   - Water
   - UI
+<<<<<<< HEAD
   - 
+=======
+  - LineCollider
+>>>>>>> d0dc4dfe062b11bd11d6641966c633f7bab30c98
   - 
   - 
   - 
@@ -47,6 +55,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
   - name: Back
     uniqueID: 2343977235
     locked: 0
@@ -56,3 +65,5 @@ TagManager:
   - name: Front
     uniqueID: 1323093383
     locked: 0
+=======
+>>>>>>> d0dc4dfe062b11bd11d6641966c633f7bab30c98
