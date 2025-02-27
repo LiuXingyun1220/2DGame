@@ -11,6 +11,8 @@ TagManager:
   - Stone
   - Lever
   - Teleport
+  - Water
+  - DirtyWater
   layers:
   - Default
   - TransparentFX

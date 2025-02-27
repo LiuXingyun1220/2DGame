@@ -487,6 +487,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -613,6 +614,25 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ecb47b4cd24fe428b7a5148e8befb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mat: {fileID: 0}
+  brushTypeTexture: {fileID: 0}
+  brushColor: {r: 0, g: 0, b: 0, a: 1}
+  raw: {fileID: 0}
+  num: 50
+  widthPower: 0.5
+  saveImage: {fileID: 0}
 --- !u!1 &785443210
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,6 +738,7 @@ GameObject:
   - component: {fileID: 986644938}
   - component: {fileID: 986644941}
   - component: {fileID: 986644940}
+  - component: {fileID: 986644942}
   m_Layer: 0
   m_Name: Grass
   m_TagString: Untagged
@@ -847,6 +868,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71533c8aaff4e9b41adb47682d7be1ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &986644942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986644937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ea3e8691144c44993f54a9f2b2820d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1289700489
@@ -1104,6 +1137,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2030580920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2030580922}
+  - component: {fileID: 2030580923}
+  m_Layer: 0
+  m_Name: DirtyWater
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2030580922
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030580920}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2030580923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030580920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e0c2ae9a40a4249a76494255706f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterPrefab: {fileID: 7930726692225480071, guid: df4a2f6e11eee2849ba572e93798cd1a, type: 3}
+  speed: 0.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1115,3 +1194,4 @@ SceneRoots:
   - {fileID: 53281711}
   - {fileID: 986644939}
   - {fileID: 1588831603}
+  - {fileID: 2030580922}
