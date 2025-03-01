@@ -494,74 +494,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99011824}
   m_CullTransparentMesh: 1
---- !u!1 &213225889
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 213225892}
-  - component: {fileID: 213225891}
-  - component: {fileID: 213225890}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &213225890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 213225889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &213225891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 213225889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &213225892
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 213225889}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &621557269 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -8465679803756743334, guid: 90de8d54b5e2f964aa5005938bafdae0, type: 3}
@@ -667,10 +599,10 @@ GameObject:
   m_Component:
   - component: {fileID: 899711461}
   - component: {fileID: 899711460}
-  - component: {fileID: 899711462}
   - component: {fileID: 899711464}
   - component: {fileID: 899711463}
   - component: {fileID: 899711465}
+  - component: {fileID: 899711466}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Rock
@@ -698,7 +630,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -724,7 +656,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.35, y: 1.2}
+  m_Size: {x: 25.6, y: 14.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -745,18 +677,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &899711462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 899711459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ef932e0be5922b4cb88b49a46c9972f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &899711463
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -794,7 +714,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 25.6, y: 14.4}
-    newSize: {x: 1.35, y: 1.2}
+    newSize: {x: 25.6, y: 14.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -838,9 +758,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 899711459}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd90c6812a228a4c8ffb456ac55a6a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxTemperature: 100
+  minTemperature: 0
+  naturalCoolingRate: 0.5
+  heatedThreshold: 80
+  freezedThreshold: 70
+  currentTemperature: 0
+--- !u!114 &899711466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899711459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ef932e0be5922b4cb88b49a46c9972f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rockSprites:
+  - {fileID: 21300000, guid: 931c1d4ed63e3a641af51be97425e088, type: 3}
+  - {fileID: 21300000, guid: 56dcc2a24a47dab45881c99cbb028369, type: 3}
+  - {fileID: 21300000, guid: 5aca61bf3d81eb64a9f2cee8dd2d15ea, type: 3}
+  - {fileID: 21300000, guid: f2567128ec18128469820d802f2075fa, type: 3}
+  - {fileID: 21300000, guid: ab0d56332ea41404ebc69c7648da857a, type: 3}
 --- !u!1 &971037424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,5 +1238,4 @@ SceneRoots:
   - {fileID: 689493945}
   - {fileID: 1438021826}
   - {fileID: 971037428}
-  - {fileID: 213225892}
   - {fileID: 1922063000579750803}

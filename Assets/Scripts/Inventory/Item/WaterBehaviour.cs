@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class WaterBehaviour : MonoBehaviour
 {
+    [SerializeField] private float coolPerSecond = 25f;
+    [SerializeField] private float destroyDelay = 0.2f;
     private void OnTriggerEnter2D(Collider2D other)
     {
-
-        Debug.Log(other.gameObject);
         // 检查是否与岩石发生碰撞
         if (other.CompareTag("Rock"))
         {
-            RockBehaviour rock = other.GetComponent<RockBehaviour>();
+            RockTemperature rock = other.GetComponent<RockTemperature>();
             if (rock != null)
             {
-                // 改变岩石
-                rock.CrackRock();
-                Destroy(gameObject);
+                // 改变岩石温度
+                rock.ApplyCooling(coolPerSecond);
+                Destroy(gameObject, destroyDelay);
             }
         }
     }
