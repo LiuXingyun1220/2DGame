@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RockTemperature : MonoBehaviour
@@ -13,6 +14,13 @@ public class RockTemperature : MonoBehaviour
 
     public float currentTemperature = 0f;
     private bool isHeated = false;
+
+    private void Start()
+    {
+        debugStyle = new GUIStyle();
+        debugStyle.fontSize = 40;  // 设置字体大小
+        debugStyle.normal.textColor = Color.yellow; // 设置字体颜色
+    }
 
     private void Update()
     {
@@ -61,19 +69,13 @@ public class RockTemperature : MonoBehaviour
 
     private void DestroyRock()
     {
+        RockBehaviour rockBehaviour=GetComponent<RockBehaviour>();
+        rockBehaviour.StartBreakAnimation();
         Debug.Log("破裂了");
-        Destroy(gameObject); // 触发岩石破裂
     }
 
     // 在RockTemperature类中添加
     private GUIStyle debugStyle;
-
-    void Start()
-    {
-        debugStyle = new GUIStyle();
-        debugStyle.fontSize = 40;  // 设置字体大小
-        debugStyle.normal.textColor = Color.yellow; // 设置字体颜色
-    }
 
     void OnGUI()
     {
