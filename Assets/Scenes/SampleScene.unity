@@ -487,9 +487,6 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
-  - component: {fileID: 519420036}
-  - component: {fileID: 519420035}
-  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -616,56 +613,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &519420034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 690ffe3c7e381b442862ee5b77639bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  painting: {fileID: 519420036}
-  burshStyles: []
---- !u!114 &519420035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dd0b3fee0fbd0a4699ae34275a5afe5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  painting: {fileID: 519420036}
-  MaxSize: 0.5
-  rate: 5
---- !u!114 &519420036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 158a34fef342a9149a1ee9de076c749f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mat: {fileID: 0}
-  brushTypeTexture: {fileID: 0}
-  brushColor: {r: 0, g: 0, b: 0, a: 1}
-  raw: {fileID: 0}
-  num: 50
-  widthPower: 0.5
-  isMouseDown: 0
-  isMouseEnter: 0
-  saveImage: {fileID: 0}
 --- !u!1 &785443210
 GameObject:
   m_ObjectHideFlags: 0
