@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chimeID: 33
-  triggerKey: 110
   chimeHighlight: {fileID: 8682392294861528089}
+  deactivateParticlePrefab: {fileID: 519313377671447454, guid: b97d406250f5c7142966f6884c658e4f, type: 3}
 --- !u!1 &8682392294861528089
 GameObject:
   m_ObjectHideFlags: 0
