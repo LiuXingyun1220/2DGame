@@ -960,36 +960,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyMappings:
-  - key: 119
-    chimeID: 11
-  - key: 101
-    chimeID: 12
-  - key: 117
-    chimeID: 13
-  - key: 105
-    chimeID: 14
   - key: 97
-    chimeID: 21
+    chimeID: 16
   - key: 115
     chimeID: 22
   - key: 100
     chimeID: 23
   - key: 102
-    chimeID: 24
-  - key: 106
     chimeID: 25
-  - key: 107
+  - key: 103
     chimeID: 26
-  - key: 108
+  - key: 104
     chimeID: 27
-  - key: 120
-    chimeID: 31
-  - key: 99
+  - key: 106
+    chimeID: 3
+  - key: 107
     chimeID: 32
-  - key: 110
+  - key: 108
     chimeID: 33
-  - key: 109
-    chimeID: 34
 --- !u!4 &1264510458
 Transform:
   m_ObjectHideFlags: 0
