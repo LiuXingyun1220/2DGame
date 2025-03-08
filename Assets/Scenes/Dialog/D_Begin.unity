@@ -314,7 +314,7 @@ MonoBehaviour:
   avatarTransform: {fileID: 1973367020}
   dialogBox: {fileID: 2108215251}
   dialogBoxTransform: {fileID: 2108215250}
-  teleport: {fileID: 0}
+  teleport: {fileID: 80821739}
   textFile: {fileID: 4900000, guid: d7ddbb588c0abc945813d7e4a8367cce, type: 3}
   LiErlang: {fileID: 21300000, guid: 66fb51edcfd964c40a75e564f27f4876, type: 3}
   LiBing: {fileID: 21300000, guid: 061abb21f36e59c4692824a5bef4a108, type: 3}
