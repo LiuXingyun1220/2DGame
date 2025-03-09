@@ -34,24 +34,27 @@ public class ArrowPointer : MonoBehaviour
         {
             Transform currentTarget = targets[currentTargetIndex];
 
-            // 计算从箭头到目标的方向
+            // 计算方向
             Vector3 direction = currentTarget.position - transform.position;
-            direction.z = 0; // 确保箭头在2D平面上旋转
+            direction.z = 0; // 确保在 2D 平面上
 
-            // 检查是否到达目标点
+            // 如果距离目标点足够近，切换到下一个目标
             if (direction.magnitude < arrivalDistance)
             {
-                // 切换到下一个目标点
                 currentTargetIndex = (currentTargetIndex + 1) % targets.Length;
                 currentTarget = targets[currentTargetIndex];
+
+                // 重新计算新的方向
+                direction = currentTarget.position - transform.position;
+                direction.z = 0;
             }
 
-            // 设置箭头的旋转，使其指向目标方向
+            // 计算角度，使箭头朝向目标
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            angle -= 90; // 调整角度，使其从Y轴正方向到目标方向
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-           
+            angle -= 90;
+            transform.rotation = Quaternion.Euler(0, 0, angle);
         }
     }
+
 }
