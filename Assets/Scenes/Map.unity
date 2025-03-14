@@ -1153,7 +1153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneFrom: Map
-  sceneToGo: Book
+  sceneToGo: Compass_Book
 --- !u!61 &1056388470
 BoxCollider2D:
   m_ObjectHideFlags: 0
