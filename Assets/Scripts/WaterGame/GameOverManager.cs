@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameOverManager : MonoBehaviour
 {
     public GameObject gameOverPanel; // 游戏结束UI面板
     public GameObject scoreUI;       // 分数Text对象（例如“Score”）
