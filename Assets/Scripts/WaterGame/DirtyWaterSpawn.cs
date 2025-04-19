@@ -16,7 +16,7 @@ public class DirtyWaterSpawn : MonoBehaviour
     private void Update()
     {
         time += Time.deltaTime;
-        if (time >= 2f)
+        if (time >= 3f)
         {
             SpawnBall();
             time = 0f;
