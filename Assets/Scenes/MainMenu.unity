@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc989a0f3c30b0f4690e3a033a1824fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneFrom: UI
+  sceneFrom: MainMenu
   sceneToGo: D_Begin
 --- !u!1 &717462107
 GameObject:
