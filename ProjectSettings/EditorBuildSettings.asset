@@ -4,6 +4,9 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
+<<<<<<< HEAD
+  m_Scenes: []
+=======
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Dialog/D_fensha_B.unity
@@ -32,4 +35,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dialog/D_Begin.unity
     guid: dadb007aaa7e69a4482efbf9eff356b6
+>>>>>>> 0b3d0e68e307158fc782a0d5d05175d18a908e0c
   m_configObjects: {}
