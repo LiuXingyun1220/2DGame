@@ -1,0 +1,62 @@
+
+眼睛.png
+size: 2917,1810
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+JM
+  rotate: true
+  xy: 2564, 963
+  size: 845, 351
+  orig: 845, 351
+  offset: 0, 0
+  index: -1
+down-eye
+  rotate: true
+  xy: 2564, 108
+  size: 853, 317
+  orig: 853, 321
+  offset: 0, 2
+  index: -1
+duli-JM
+  rotate: false
+  xy: 275, 37
+  size: 174, 69
+  orig: 176, 72
+  offset: 1, 2
+  index: -1
+eye
+  rotate: false
+  xy: 2, 187
+  size: 438, 374
+  orig: 441, 379
+  offset: 1, 4
+  index: -1
+highlight
+  rotate: false
+  xy: 2, 53
+  size: 271, 53
+  orig: 275, 56
+  offset: 2, 2
+  index: -1
+meimao
+  rotate: false
+  xy: 451, 2
+  size: 1059, 559
+  orig: 1059, 559
+  offset: 0, 0
+  index: -1
+skin
+  rotate: false
+  xy: 2, 563
+  size: 2560, 1245
+  orig: 2562, 1247
+  offset: 1, 1
+  index: -1
+white-eye
+  rotate: false
+  xy: 1512, 154
+  size: 774, 407
+  orig: 776, 409
+  offset: 1, 1
+  index: -1
