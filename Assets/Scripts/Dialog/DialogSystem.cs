@@ -17,7 +17,7 @@ public class DialogSystem : MonoBehaviour
     public RectTransform dialogBoxTransform;// 调整对话框位置
     public GameObject teleport;// 跳转
 
-    Vector3 offset = new Vector3(461.75f, 222.5f, 0);
+    Vector3 offset = new Vector3(650f, 450f, 0);
 
     //文本文件
     public TextAsset textFile;
@@ -143,14 +143,16 @@ public class DialogSystem : MonoBehaviour
     {
         dialogBoxTransform.eulerAngles = new Vector3(0, 0, 0);
         avatarTransform.position = new Vector3(-345, -88, 0) + offset;
-        textTransform.position = new Vector3(75, -130, 0) + offset;
-        nameTransform.position = new Vector3(-133, -55, 0) + offset;
+        avatarTransform.localScale = new Vector3(3.6f, 6.21f, 3.6f);
+        textTransform.position = new Vector3(700, -190, 0) + offset;
+        nameTransform.position = new Vector3(200, 0, 0) + offset;
     }
     void OtherLocation()
     {
         dialogBoxTransform.eulerAngles = new Vector3(0, -180, 0);
-        avatarTransform.position = new Vector3(345, -15, 0) + offset;
-        textTransform.position = new Vector3(-60, -130, 0) + offset;
-        nameTransform.position = new Vector3(210, -55, 0) + offset;
+        avatarTransform.position = new Vector3(1600, 0, 0) + offset;
+        avatarTransform.localScale = new Vector3(3,5.175f,3);
+        textTransform.position = new Vector3(500, -190, 0) + offset;
+        nameTransform.position = new Vector3(1300, 0, 0) + offset;
     }
 }
