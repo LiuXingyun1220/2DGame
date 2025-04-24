@@ -308,7 +308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3050191643734278705, guid: 72be1506a1159454bb0bc24f73f13c3a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -59.410126
+      value: -140.99997
       objectReference: {fileID: 0}
     - target: {fileID: 3050191643734278705, guid: 72be1506a1159454bb0bc24f73f13c3a, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -359,6 +359,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4544592077550008530, guid: 72be1506a1159454bb0bc24f73f13c3a, type: 3}
+      propertyPath: m_text
+      value: 123
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544592077550008530, guid: 72be1506a1159454bb0bc24f73f13c3a, type: 3}
       propertyPath: m_fontColor.b
       value: 0
       objectReference: {fileID: 0}
@@ -370,9 +374,13 @@ PrefabInstance:
       propertyPath: m_fontColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4544592077550008530, guid: 72be1506a1159454bb0bc24f73f13c3a, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     - target: {fileID: 5413601882751696906, guid: 72be1506a1159454bb0bc24f73f13c3a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 110
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 5413601882751696906, guid: 72be1506a1159454bb0bc24f73f13c3a, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -383,6 +391,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6524193822580897079, guid: 72be1506a1159454bb0bc24f73f13c3a, type: 3}
+      propertyPath: m_text
+      value: 123
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524193822580897079, guid: 72be1506a1159454bb0bc24f73f13c3a, type: 3}
       propertyPath: m_fontColor.b
       value: 0
       objectReference: {fileID: 0}
@@ -394,21 +406,25 @@ PrefabInstance:
       propertyPath: m_fontColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6524193822580897079, guid: 72be1506a1159454bb0bc24f73f13c3a, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     - target: {fileID: 6532149819198231131, guid: 72be1506a1159454bb0bc24f73f13c3a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 110
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 6532149819198231131, guid: 72be1506a1159454bb0bc24f73f13c3a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -43
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 7169019862922651520, guid: 72be1506a1159454bb0bc24f73f13c3a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -59.410126
+      value: -141
       objectReference: {fileID: 0}
     - target: {fileID: 7169019862922651520, guid: 72be1506a1159454bb0bc24f73f13c3a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -39
+      value: -96
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

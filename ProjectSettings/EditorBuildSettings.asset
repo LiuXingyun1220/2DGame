@@ -4,20 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Book/Compass_Book.unity
-    guid: 303f796b4b593b446adf84b9dd3ef67d
-  - enabled: 1
-    path: Assets/Scenes/Book/FeiShaYan_Book.unity
-    guid: c7907dc530367d94189f739393638bd1
-  - enabled: 1
-    path: Assets/Scenes/Book/HeatAndCold_Book.unity
-    guid: cd6da9a3773826d478dbe69a64dc3261
-  - enabled: 1
-    path: Assets/Scenes/Book/YuZui_Book.unity
-    guid: 7046c1fde33de0044aa9065de54c240c
-  - enabled: 1
-    path: Assets/Scenes/Bottle-Neck Channel/HeatAndColdScene.unity
-    guid: cf2263353782f634e8946b44e76ac37e
+  m_Scenes: []
   m_configObjects: {}
