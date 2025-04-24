@@ -1,62 +1,63 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class FragmentPanel : MonoBehaviour
 {
     public Image[] fragmentImages; // 关联所有 Fragment 的图片
     public Button[] fragmentButtons; // 关联所有 Fragment 的按钮
     private bool[] isUnlocked; // 存储每个 Fragment 是否解锁
+    int unLockedLevelIndex;
 
     void Start()
     {
-        int totalFragments = fragmentImages.Length;
-        isUnlocked = new bool[totalFragments];
-
-        // 读取存储的解锁状态
-        for (int i = 0; i < totalFragments; i++)
+        isUnlocked = new bool[fragmentImages.Length];
+        unLockedLevelIndex = PlayerPrefs.GetInt("unLockedLevelIndex");
+       
+        for (int i = 0; i < fragmentImages.Length; i++)
         {
-            isUnlocked[i] = PlayerPrefs.GetInt($"FragmentUnlocked_{i}", 0) == 1;
+            fragmentImages[i].color = new Color(0.5f, 0.5f, 0.5f, 1); // 设置为暗淡颜色
+            fragmentButtons[i].interactable = false; // 禁用按钮
+            int index = i; // 解决闭包问题
+            fragmentButtons[i].onClick.AddListener(() => OnFragmentClick(index));
+        }
+        for (int i = 0; i < unLockedLevelIndex; i++)
+        {
+            fragmentImages[i].color = Color.white;
+            fragmentButtons[i].interactable = true;
+            isUnlocked[i] = true;
 
-            if (isUnlocked[i])
-            {
-                fragmentImages[i].color = Color.white; // 亮色
-                fragmentButtons[i].interactable = true; // 启用按钮
-            }
-            else
-            {
-                fragmentImages[i].color = new Color(0.5f, 0.5f, 0.5f, 1); // 变灰
-                fragmentButtons[i].interactable = false; // 禁用按钮
-            }
-
-            // 绑定点击事件
-            int index = i;
-            fragmentButtons[i].onClick.AddListener(() => OpenStory(index));
         }
     }
+  
 
-    // 解锁指定的 Fragment
-    public void UnlockFragment(int index)
-    {
-        if (index >= 0 && index < fragmentImages.Length)
-        {
-            fragmentImages[index].color = Color.white; // 亮色
-            fragmentButtons[index].interactable = true; // 启用按钮
-            isUnlocked[index] = true;
 
-            // 存储解锁状态
-            PlayerPrefs.SetInt($"FragmentUnlocked_{index}", 1);
-            PlayerPrefs.Save();
-        }
-    }
-
-    // 点击 Fragment，进入相应故事页面
-    public void OpenStory(int index)
+    // 点击碎片跳转到 Story
+    public void OnFragmentClick(int index)
     {
         if (isUnlocked[index])
         {
-            Debug.Log($"打开故事 {index}");
-            SceneManager.LoadScene($"Story_{index}"); // 这里 Scene 名称要与 Unity 场景匹配
+            if (index == 0)
+            {
+                Debug.Log($"📖 跳转到 HeatAndCold_book");
+                SceneManager.LoadScene("HeatAndCold_book");
+            }
+            else if (index == 1)
+            {
+                Debug.Log($"📖 跳转到 YuZui_book");
+                SceneManager.LoadScene("YuZui_book");
+            }
+            else if (index == 2)
+            {
+                Debug.Log($"📖 跳转到 FeiShaYan_book");
+                SceneManager.LoadScene("FeiShaYan_book");
+            }
+            else if (index == 3)
+            {
+                Debug.Log($"📖 跳转到 Compass_book");
+                SceneManager.LoadScene("Compass_book");
+            }
         }
     }
 }

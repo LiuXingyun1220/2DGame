@@ -13,6 +13,7 @@ TagManager:
   - Teleport
   - Water
   - DirtyWater
+  - RiverBoundary
   layers:
   - Default
   - TransparentFX

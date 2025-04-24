@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1e9ee71eab953ec46b1307887b71bdf0
+guid: f41d31f8f3fc45f459fa7dc41870cdc6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -49,7 +49,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 1131, y: 842, z: 1222, w: 508}
+  spriteBorder: {x: 154, y: 664, z: 1117, w: 27}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boat_0
+      name: Pack_0
       rect:
         serializedVersion: 2
-        x: 1131
-        y: 838
-        width: 213
-        height: 94
+        x: 155
+        y: 665
+        width: 60
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aee105e37605ecf4f9e43cb11a686912
-      internalID: 1784807143
+      spriteID: 8067cc53526697542838321da03360f7
+      internalID: -36229275
       vertices: []
       indices: 
       edges: []
@@ -128,7 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Boat_0: 1784807143
+      Pack_0: -36229275
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
