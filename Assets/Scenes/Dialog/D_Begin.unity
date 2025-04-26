@@ -310,6 +310,14 @@ PrefabInstance:
       propertyPath: teleport
       value: 
       objectReference: {fileID: 80821739}
+    - target: {fileID: 9131435030976809733, guid: 59f3ab09d735f9c43b8f4bf9db98e35a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131435030976809733, guid: 59f3ab09d735f9c43b8f4bf9db98e35a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 585
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
