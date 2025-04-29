@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneFrom: D_music_E
-  sceneToGo: Compass
+  sceneToGo: End
 --- !u!61 &440134702
 BoxCollider2D:
   m_ObjectHideFlags: 0

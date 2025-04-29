@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneFrom: MainMenu
-  sceneToGo: D_Begin
+  sceneToGo: Begin
 --- !u!1 &717462107
 GameObject:
   m_ObjectHideFlags: 0
