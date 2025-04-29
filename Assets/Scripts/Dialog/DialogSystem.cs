@@ -142,10 +142,10 @@ public class DialogSystem : MonoBehaviour
     void MyLocation()
     {
         dialogBoxTransform.eulerAngles = new Vector3(0, 0, 0);
-        avatarTransform.position = new Vector3(-345, -88, 0) + offset;
+        avatarTransform.position = new Vector3(-330, -88, 0) + offset;
         avatarTransform.localScale = new Vector3(3.6f, 6.21f, 3.6f);
-        textTransform.position = new Vector3(700, -190, 0) + offset;
-        nameTransform.position = new Vector3(200, 0, 0) + offset;
+        textTransform.position = new Vector3(770, -190, 0) + offset;
+        nameTransform.position = new Vector3(220, 0, 0) + offset;
     }
     void OtherLocation()
     {
