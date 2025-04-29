@@ -2449,6 +2449,10 @@ PrefabInstance:
       propertyPath: sceneFrom
       value: End
       objectReference: {fileID: 0}
+    - target: {fileID: 7071892299436190354, guid: 0ce6e53b4db117d4e940ed30b2bb3eab, type: 3}
+      propertyPath: sceneToGo
+      value: Compass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2803721090446592714, guid: 0ce6e53b4db117d4e940ed30b2bb3eab, type: 3}
