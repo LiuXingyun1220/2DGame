@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 200f;
+    public float speed = 250f;
     private Rigidbody2D rb;
     private RiverBoundary riverBoundary;
 
