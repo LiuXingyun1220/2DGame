@@ -82,6 +82,11 @@ public class SlotUI : MonoBehaviour,IPointerClickHandler,IBeginDragHandler,IDrag
             isSelected = true;
             inventoryUI.UpdateSlotHighlight(slotIndex);
         }
+
+        if (CursorManager.Instance != null)
+        {
+            CursorManager.Instance.SetDragCursor();
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -93,6 +98,12 @@ public class SlotUI : MonoBehaviour,IPointerClickHandler,IBeginDragHandler,IDrag
     {
         inventoryUI.dragItem.enabled = false;
         //Debug.Log(eventData.pointerCurrentRaycast.gameObject);
+
+        // 恢复鼠标为普通样式
+        if (CursorManager.Instance != null)
+        {
+            CursorManager.Instance.SetPointCursor();
+        }
 
         if (eventData.pointerCurrentRaycast.gameObject != null)
         {

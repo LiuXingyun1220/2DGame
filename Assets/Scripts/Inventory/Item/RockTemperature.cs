@@ -59,6 +59,7 @@ public class RockTemperature : MonoBehaviour
         if (!isHeated && currentTemperature >= heatedThreshold)
         {
             isHeated = true;
+            // TODO: 播放音效
             Debug.Log("加热过了");
         }
         if (isHeated && currentTemperature <= freezedThreshold)

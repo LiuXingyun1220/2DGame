@@ -4,11 +4,20 @@ using UnityEditor.SearchService;
 using UnityEngine;
 
 namespace MyGame.Inventory {
-    public class CursorManager : MonoBehaviour
+    public class CursorManager : Singleton<CursorManager>
     {
         private Vector3 mouseWorldPos;
 
         private bool canClick;
+
+        [Header("鼠标指针样式")]
+        public Texture2D PointCursor;
+        public Texture2D DragCursor;
+
+        private void Start()
+        {
+            SetPointCursor();
+        }
 
         private void Update()
         {
@@ -43,6 +52,16 @@ namespace MyGame.Inventory {
         private Collider2D ObjectAtMousePosition()
         {
             return Physics2D.OverlapPoint(mouseWorldPos);
+        }
+
+        public void SetPointCursor()
+        {
+            Cursor.SetCursor(PointCursor, new Vector2(16, 16), CursorMode.Auto);
+        }
+
+        public void SetDragCursor()
+        {
+            Cursor.SetCursor(DragCursor, new Vector2(16, 16), CursorMode.Auto);
         }
     }
 }

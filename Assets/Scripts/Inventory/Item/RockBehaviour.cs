@@ -22,6 +22,7 @@ public class RockBehaviour : MonoBehaviour
     // 引用温度脚本
     private RockTemperature rockTemperature;
 
+
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
