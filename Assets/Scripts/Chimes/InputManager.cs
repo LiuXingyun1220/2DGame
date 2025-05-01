@@ -28,7 +28,7 @@ public class InputManager : MonoBehaviour
         {
             if (Input.GetKeyDown(key))
             {
-                Debug.Log("按下了" + key);
+                //Debug.Log("按下了" + key);
                 int targetID = keyDict[key];
                 float accuracy = Time.time - ChimesManager.Instance.GetActivationTime(targetID);
                 ChimesManager.Instance.TryHitChime(targetID, accuracy);
