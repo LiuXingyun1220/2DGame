@@ -15,7 +15,7 @@ MonoBehaviour:
   active: 1
   _Strength:
     m_OverrideState: 1
-    m_Value: 0.968
+    m_Value: 0.988
   _Width:
     m_OverrideState: 1
     m_Value: 1.919
