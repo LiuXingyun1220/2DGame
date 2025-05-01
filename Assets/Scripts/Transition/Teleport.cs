@@ -10,5 +10,6 @@ public class Teleport : MonoBehaviour
     public void TeleportToScene()
     {
         TransitionManager.Instance.Transition(sceneFrom, sceneToGo);
+
     }
 }

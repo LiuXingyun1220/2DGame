@@ -19,6 +19,12 @@ public class LevelTrigger : MonoBehaviour
             {
                 // 使用 TransitionManager 进行场景过渡
                 TransitionManager.Instance.Transition(SceneManager.GetActiveScene().name, levelName);
+                //判断有没有镜头
+                Scene persistentScene = SceneManager.GetSceneByName("PersistentScene");
+                if (!persistentScene.IsValid())
+                {
+                    SceneManager.LoadScene("PersistentScene", LoadSceneMode.Additive);
+                }
             }
             else
             {
