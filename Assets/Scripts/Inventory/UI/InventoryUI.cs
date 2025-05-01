@@ -12,6 +12,13 @@ namespace MyGame.Inventory
         
         [SerializeField] private SlotUI[] playerSlots;
 
+        [Header("背包设置")]
+        [SerializeField] private int fireInitCnt;
+        [SerializeField] private int waterInitCnt;
+        [SerializeField] private int fireItemID = 1001; 
+        [SerializeField] private int waterItemID = 1002; 
+
+
         private void OnEnable()
         {
             EventHandler.UpdateInventoryUI += OnUpdateInventoryUI;
@@ -48,6 +55,27 @@ namespace MyGame.Inventory
             for (int i = 0; i < playerSlots.Length; i++)
             {
                 playerSlots[i].slotIndex = i;
+            }
+
+            // 初始化物品数量
+            InitializeInventoryItems();
+        }
+
+        /// <summary>
+        /// 初始化背包中的物品数量
+        /// </summary>
+        private void InitializeInventoryItems()
+        {
+            // 设置火元素的初始数量
+            if (fireInitCnt > 0)
+            {
+                InventoryManager.Instance.SetItemQuantity(fireItemID, fireInitCnt);
+            }
+
+            // 设置水元素的初始数量
+            if (waterInitCnt > 0)
+            {
+                InventoryManager.Instance.SetItemQuantity(waterItemID, waterInitCnt);
             }
         }
 
