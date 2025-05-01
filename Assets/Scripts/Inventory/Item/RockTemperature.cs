@@ -72,7 +72,7 @@ public class RockTemperature : MonoBehaviour
     {
         RockBehaviour rockBehaviour=GetComponent<RockBehaviour>();
         rockBehaviour.StartBreakAnimation();
-        Debug.Log("破裂了");
+        //Debug.Log("破裂了");
     }
 
     // 在RockTemperature类中添加
