@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dialog/D_yuzui_E.unity
     guid: 4809f289ced1ab8498d09289d3ea791c
+  - enabled: 1
+    path: Assets/Scenes/BeforeD_dialog.unity
+    guid: 583b65435126bfb4ca4d5c6fd262cd77
   m_configObjects: {}
