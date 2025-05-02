@@ -13,6 +13,10 @@ public class PanelOpen : MonoBehaviour
             bool isActive = panel.activeSelf;
             panel.SetActive(!isActive);
         }
+        else
+        {
+            Debug.Log("±³°üÃæ°åÎÞ");
+        }
     }
 
    
