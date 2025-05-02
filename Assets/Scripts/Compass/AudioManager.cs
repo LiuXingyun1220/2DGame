@@ -12,33 +12,13 @@ public class Sound
     public float volume = 0.7f; // 音量大小
 }
 
-public class AudioManager : MonoBehaviour
+public class AudioManager : Singleton<AudioManager>
 {
-    public static AudioManager Instance;
-
     // 定义音乐和音效的Sound数组
     public Sound[] musicSounds, sfxSounds;
 
     // 音乐和音效的AudioSource
     public AudioSource musicSource, sfxSource;
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            // 在场景切换时不销毁该对象
-            DontDestroyOnLoad(gameObject);
-
-            // 初始化 AudioSource
-            musicSource = gameObject.AddComponent<AudioSource>();
-            sfxSource = gameObject.AddComponent<AudioSource>();
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 
     // 播放音乐的方法，参数为音乐名称
     public void PlayMusic(string name)

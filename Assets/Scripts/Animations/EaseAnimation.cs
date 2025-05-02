@@ -16,6 +16,8 @@ public class EaseAnimation : MonoBehaviour
 
         easeObject.anchoredPosition = Vector2.zero;
 
+        AudioManager.Instance.PlayMusic("start");
+
         //Ö´ÐÐ¶¯»­
         AnimateTransition();
     }
