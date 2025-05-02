@@ -103,6 +103,16 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+<<<<<<< HEAD
+=======
+    },
+    "com.unity.collab-proxy": {
+      "version": "2.6.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+>>>>>>> 69f7616e7564c22953309478a324df3fe55d72bd
     },
     "com.unity.collections": {
       "version": "1.2.4",
