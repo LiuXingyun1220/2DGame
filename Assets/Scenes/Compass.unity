@@ -1815,6 +1815,7 @@ RectTransform:
   - {fileID: 1594662338}
   - {fileID: 1414235034}
   - {fileID: 1942350165}
+  - {fileID: 1950021453}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2417,20 +2418,20 @@ MonoBehaviour:
     volume: 0.5
   - name: compass
     clip: {fileID: 8300000, guid: c3c7a3b2cdfba5742bc6f877264fe4af, type: 3}
-    volume: 0.5
+    volume: 1
   - name: cartoon
     clip: {fileID: 8300000, guid: c3c7a3b2cdfba5742bc6f877264fe4af, type: 3}
-    volume: 0.5
+    volume: 1
   sfxSounds:
   - name: bookflip
     clip: {fileID: 8300000, guid: c01ff61073b85bc4c929dc928941cc45, type: 3}
-    volume: 0.5
+    volume: 1
   - name: heat
     clip: {fileID: 8300000, guid: 10db1b1d1e5a0fe4a9f424509993ada3, type: 3}
-    volume: 0.5
+    volume: 1
   - name: broke
     clip: {fileID: 8300000, guid: ad7376bbeb9bb73489dbd6684b2fe00b, type: 3}
-    volume: 0.5
+    volume: 1
   musicSource: {fileID: 1017036152}
   sfxSource: {fileID: 511245317}
 --- !u!4 &1950021453
@@ -2441,14 +2442,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950021451}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.797733, y: 1.4600723, z: -0.46995157}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1319.7977, y: -718.5399, z: -0.46995157}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1017036153}
   - {fileID: 511245318}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1330151583}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1968865198
 GameObject:
@@ -2888,4 +2889,3 @@ SceneRoots:
   - {fileID: 736805911}
   - {fileID: 1103020280}
   - {fileID: 1330151583}
-  - {fileID: 1950021453}
