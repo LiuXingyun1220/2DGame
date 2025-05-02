@@ -11,6 +11,7 @@ public class PanelOpen : MonoBehaviour
         Debug.Log("OpenPanel method called!");
         if (panel != null)
         {
+            
             bool isActive = panel.activeSelf;
             panel.SetActive(!isActive);
         }
