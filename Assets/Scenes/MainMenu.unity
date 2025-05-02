@@ -952,7 +952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   easeObject: {fileID: 982936146}
-  duration: 5
+  duration: 7
 --- !u!1 &1997129367
 GameObject:
   m_ObjectHideFlags: 0
