@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AfterBegin.unity
     guid: 1e7861d44d5b8554699292243da52787
+  - enabled: 1
+    path: Assets/Scenes/The Fish Mouth Levee/YuZui.unity
+    guid: ef4e99924c0f1b34c804ebcc6cd5db63
   m_configObjects: {}
