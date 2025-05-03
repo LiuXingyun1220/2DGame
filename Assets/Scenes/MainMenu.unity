@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 137845926}
   - component: {fileID: 137845925}
   m_Layer: 5
-  m_Name: Cloud01 (2)
+  m_Name: Cloud03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,16 +148,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137845923}
-  m_LocalRotation: {x: -0, y: -0.91013473, z: -0, w: -0.4143125}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.85033333, y: 0.85033333, z: 0.85033333}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 982936146}
-  m_LocalEulerAnglesHint: {x: 0, y: -228.952, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1981, y: 859}
+  m_AnchoredPosition: {x: 2176, y: 595}
   m_SizeDelta: {x: 1244, y: 418.7867}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &137845925
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a696678ebec88564ab34f6a1035f2af4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b7bceb1077fed4945bbab925050e0f96, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 805113756}
   - component: {fileID: 805113755}
   m_Layer: 5
-  m_Name: Cloud01 (1)
+  m_Name: Cloud02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -554,16 +554,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805113753}
-  m_LocalRotation: {x: -0, y: -0.99978745, z: -0, w: 0.02062074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.85033333, y: 0.85033333, z: 0.85033333}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 982936146}
-  m_LocalEulerAnglesHint: {x: 0, y: -177.637, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13, y: 446}
+  m_AnchoredPosition: {x: 112, y: 512}
   m_SizeDelta: {x: 1244, y: 418.7867}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &805113755
@@ -599,7 +599,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a696678ebec88564ab34f6a1035f2af4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5b3aca439810a5147ab5d46ab9e33c11, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -653,6 +653,7 @@ RectTransform:
   - {fileID: 137845924}
   - {fileID: 2062616521}
   - {fileID: 1997129368}
+  - {fileID: 1581637054}
   m_Father: {fileID: 1138702209}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -848,6 +849,95 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   easeObject: {fileID: 982936146}
   duration: 7
+--- !u!1 &1581637053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1581637054}
+  - component: {fileID: 1581637057}
+  - component: {fileID: 1581637056}
+  - component: {fileID: 1581637055}
+  m_Layer: 5
+  m_Name: Cloud06
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1581637054
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581637053}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.2050754, y: 1.2050754, z: 1.2050754}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 982936146}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -865, y: 306}
+  m_SizeDelta: {x: 1244, y: 418.7867}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1581637055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581637053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b140ee71caec19043ba71a7eaab299fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 150
+--- !u!114 &1581637056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581637053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: fab2939c3dc5a494dac507977de9f2c0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1581637057
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581637053}
+  m_CullTransparentMesh: 1
 --- !u!1 &1997129367
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,7 +951,7 @@ GameObject:
   - component: {fileID: 1997129370}
   - component: {fileID: 1997129369}
   m_Layer: 5
-  m_Name: Cloud02 (1)
+  m_Name: Cloud05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -874,16 +964,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997129367}
-  m_LocalRotation: {x: -0, y: -0.96689945, z: -0, w: 0.25515774}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.2050754, y: 1.2050754, z: 1.2050754}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 982936146}
-  m_LocalEulerAnglesHint: {x: 0, y: -150.434, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1473, y: 397}
+  m_AnchoredPosition: {x: 1341, y: 29}
   m_SizeDelta: {x: 1244, y: 418.7867}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1997129369
@@ -919,7 +1009,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5b3aca439810a5147ab5d46ab9e33c11, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 46dff1c7bf8ad194bad77230e8d44c5e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -950,7 +1040,7 @@ GameObject:
   - component: {fileID: 2062616522}
   - component: {fileID: 2062616524}
   m_Layer: 5
-  m_Name: Cloud02
+  m_Name: Cloud04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -995,7 +1085,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5b3aca439810a5147ab5d46ab9e33c11, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cabbd98afdb77744380242b7bd41a1a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
