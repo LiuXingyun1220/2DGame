@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneFrom: MainMenu
-  sceneToGo: Begin
+  sceneToGo: Book
 --- !u!1 &646389318
 GameObject:
   m_ObjectHideFlags: 0
