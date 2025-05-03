@@ -17,6 +17,7 @@ public class RockTemperature : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.instance.PlayMusic("game");
         debugStyle = new GUIStyle();
         debugStyle.fontSize = 40;  // 设置字体大小
         debugStyle.normal.textColor = Color.yellow; // 设置字体颜色
@@ -61,7 +62,7 @@ public class RockTemperature : MonoBehaviour
             isHeated = true;
             AudioManager.instance.PlaySFX("heat");
             Debug.Log("加热过了");
-            AudioManager.instance.ToggleSFX();
+          
         }
         if (isHeated && currentTemperature <= freezedThreshold)
         {
@@ -72,9 +73,8 @@ public class RockTemperature : MonoBehaviour
     private void DestroyRock()
     {
         RockBehaviour rockBehaviour=GetComponent<RockBehaviour>();
-        AudioManager.instance.ToggleSFX();
-        AudioManager.instance.PlaySFX("heat");
         rockBehaviour.StartBreakAnimation();
+        AudioManager.instance.PlaySFX("heat");
         //Debug.Log("破裂了");
     }
 
