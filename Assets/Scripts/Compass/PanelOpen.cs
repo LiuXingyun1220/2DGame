@@ -11,6 +11,7 @@ public class PanelOpen : MonoBehaviour
         Debug.Log("OpenPanel method called!");
         if (panel != null)
         {
+            AudioManager.instance.PlaySFX("bookflip"); 
             bool isActive = panel.activeSelf;
             panel.SetActive(!isActive);
         }

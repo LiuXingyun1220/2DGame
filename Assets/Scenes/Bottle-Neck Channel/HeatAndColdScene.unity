@@ -515,6 +515,32 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4495327097084892849, guid: 6900727930fbb0d4680efded4f54b0de, type: 3}
   m_PrefabInstance: {fileID: 4643039875076617549}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &683734521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683734519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6a399a8254934591b0d96ec659079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLevelName: D_yuzui_B
+--- !u!114 &683734522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683734519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff6a16ec1cfaaf4dbb07cd88a7149a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 1602824043}
 --- !u!1 &689493943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1556,10 +1582,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: End
       objectReference: {fileID: 0}
+    - target: {fileID: 8828678932725757585, guid: 6900727930fbb0d4680efded4f54b0de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8828678932725757585, guid: 6900727930fbb0d4680efded4f54b0de, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 683734522}
+    - targetCorrespondingSourceObject: {fileID: 8828678932725757585, guid: 6900727930fbb0d4680efded4f54b0de, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 683734521}
   m_SourcePrefab: {fileID: 100100000, guid: 6900727930fbb0d4680efded4f54b0de, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
