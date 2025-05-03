@@ -17,7 +17,6 @@ public class RockTemperature : MonoBehaviour
 
     private void Start()
     {
-        AudioManager.instance.PlayMusic("game");
         debugStyle = new GUIStyle();
         debugStyle.fontSize = 40;  // 设置字体大小
         debugStyle.normal.textColor = Color.yellow; // 设置字体颜色
