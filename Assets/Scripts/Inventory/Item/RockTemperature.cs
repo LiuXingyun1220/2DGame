@@ -60,7 +60,7 @@ public class RockTemperature : MonoBehaviour
         if (!isHeated && currentTemperature >= heatedThreshold)
         {
             isHeated = true;
-            AudioManager.instance.PlaySFX("heat");
+            
             Debug.Log("加热过了");
           
         }
