@@ -7,7 +7,10 @@ public class GameBingoManager : MonoBehaviour
 {
     public GameObject gameBingoPanel; // 游戏胜利UI面板
     public GameObject scoreUI;        // 分数UI对象
-    public int winScoreThreshold = 6; // 触发胜利的分数阈值
+    public int winScoreThreshold = 4; // 触发胜利的分数阈值
+    public GameObject background ;
+    //public GameObject Water;
+    //public GameObject DirtyWater;
 
     private bool isGameBingo = false;
 
@@ -21,6 +24,7 @@ public class GameBingoManager : MonoBehaviour
     {
         if (!isGameBingo && Data.Score > winScoreThreshold)
         {
+            background.SetActive(false);
             GameBingo();
         }
     }
@@ -28,6 +32,8 @@ public class GameBingoManager : MonoBehaviour
     void GameBingo()
     {
         isGameBingo = true;
+        //Water.SetActive(false);
+        //DirtyWater.SetActive(false);
         gameBingoPanel.SetActive(true);  // 显示胜利UI
         scoreUI.SetActive(false);        // 隐藏分数UI
     }
