@@ -302,6 +302,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2456116473645192945, guid: 59f3ab09d735f9c43b8f4bf9db98e35a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -134
+      objectReference: {fileID: 0}
     - target: {fileID: 5745589414382584912, guid: 59f3ab09d735f9c43b8f4bf9db98e35a, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -316,7 +320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9131435030976809733, guid: 59f3ab09d735f9c43b8f4bf9db98e35a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 585
+      value: 611
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

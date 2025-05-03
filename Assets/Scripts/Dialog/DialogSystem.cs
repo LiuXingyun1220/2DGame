@@ -144,7 +144,7 @@ public class DialogSystem : MonoBehaviour
         dialogBoxTransform.eulerAngles = new Vector3(0, 0, 0);
         avatarTransform.position = new Vector3(-330, -88, 0) + offset;
         avatarTransform.localScale = new Vector3(3.6f, 6.21f, 3.6f);
-        textTransform.position = new Vector3(770, -190, 0) + offset;
+        textTransform.position = new Vector3(770, -165, 0) + offset;
         nameTransform.position = new Vector3(220, 0, 0) + offset;
     }
     void OtherLocation()
@@ -152,7 +152,7 @@ public class DialogSystem : MonoBehaviour
         dialogBoxTransform.eulerAngles = new Vector3(0, -180, 0);
         avatarTransform.position = new Vector3(1600, 0, 0) + offset;
         avatarTransform.localScale = new Vector3(3,5.175f,3);
-        textTransform.position = new Vector3(500, -190, 0) + offset;
+        textTransform.position = new Vector3(500, -165, 0) + offset;
         nameTransform.position = new Vector3(1300, 0, 0) + offset;
     }
 }
