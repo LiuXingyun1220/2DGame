@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class FragmentPanel : MonoBehaviour
 {
     [Header("UI Components")]
-    public Image[] fragmentImages; // 碎片图片数组
-    public Button[] fragmentButtons; // 碎片按钮数组
+    public GameObject[] fragments;
+    public GameObject text;// 碎片按钮数组
 
     [Header("Level Settings")]
     [Tooltip("关卡顺序必须与按钮索引对应")]
@@ -21,23 +21,28 @@ public class FragmentPanel : MonoBehaviour
     // 初始化碎片为锁定状态
     private void InitializeFragments()
     {
-        for (int i = 0; i < fragmentImages.Length; i++)
+        for (int i = 0; i < fragments.Length; i++)
         {
-            fragmentImages[i].color = new Color(0.5f, 0.5f, 0.5f, 1);
-            fragmentButtons[i].interactable = false;
+            fragments[i].SetActive(false);
+            
         }
     }
 
     // 更新碎片解锁状态
     public void UpdateFragmentStatus()
     {
+       
         for (int i = 0; i < levelKeys.Length; i++)
         {
-            if (i >= fragmentImages.Length) break;
+            
+            if (i >= fragments.Length) break;
 
             bool isUnlocked = LevelComplete.Instance.IsLevelCompleted(levelKeys[i]);
-            fragmentImages[i].color = isUnlocked ? Color.white : new Color(0.5f, 0.5f, 0.5f, 1);
-            fragmentButtons[i].interactable = isUnlocked;
+            fragments[i].SetActive(isUnlocked);
+            if (isUnlocked)
+            {
+                text.SetActive(false);
+            }
         }
     }
 

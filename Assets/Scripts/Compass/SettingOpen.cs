@@ -2,24 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PanelOpen : MonoBehaviour
+public class SettingOpen : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject panel;
     public void OpenPanel()
     {
-        Debug.Log("OpenPanel method called!");
         if (panel != null)
         {
-            AudioManager.instance.PlaySFX("bookflip"); 
+            AudioManager.instance.PlaySFX("bookflip");
             bool isActive = panel.activeSelf;
             panel.SetActive(!isActive);
         }
         else
         {
-            Debug.Log("背包面板无");
+            Debug.Log("设置面板无");
         }
     }
 
-   
+
 }
