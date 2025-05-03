@@ -708,7 +708,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: c3c7a3b2cdfba5742bc6f877264fe4af, type: 3}
     volume: 0.5
   - name: cartoon
-    clip: {fileID: 8300000, guid: c3c7a3b2cdfba5742bc6f877264fe4af, type: 3}
+    clip: {fileID: 8300000, guid: 6fb0197bb559d734b8bdab961f60d1ea, type: 3}
+    volume: 0.5
+  - name: game
+    clip: {fileID: 8300000, guid: 6fb0197bb559d734b8bdab961f60d1ea, type: 3}
     volume: 0.5
   sfxSounds:
   - name: bookflip
