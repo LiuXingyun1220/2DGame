@@ -59,8 +59,9 @@ public class RockTemperature : MonoBehaviour
         if (!isHeated && currentTemperature >= heatedThreshold)
         {
             isHeated = true;
- 
+            AudioManager.instance.PlaySFX("heat");
             Debug.Log("加热过了");
+            AudioManager.instance.ToggleSFX();
         }
         if (isHeated && currentTemperature <= freezedThreshold)
         {
@@ -71,7 +72,8 @@ public class RockTemperature : MonoBehaviour
     private void DestroyRock()
     {
         RockBehaviour rockBehaviour=GetComponent<RockBehaviour>();
-
+        AudioManager.instance.ToggleSFX();
+        AudioManager.instance.PlaySFX("heat");
         rockBehaviour.StartBreakAnimation();
         //Debug.Log("破裂了");
     }

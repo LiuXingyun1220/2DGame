@@ -241,7 +241,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -706,20 +706,20 @@ MonoBehaviour:
     volume: 0.5
   - name: compass
     clip: {fileID: 8300000, guid: c3c7a3b2cdfba5742bc6f877264fe4af, type: 3}
-    volume: 1
+    volume: 0.5
   - name: cartoon
     clip: {fileID: 8300000, guid: c3c7a3b2cdfba5742bc6f877264fe4af, type: 3}
-    volume: 1
+    volume: 0.5
   sfxSounds:
   - name: bookflip
     clip: {fileID: 8300000, guid: c01ff61073b85bc4c929dc928941cc45, type: 3}
-    volume: 0.586
+    volume: 0.7
   - name: heat
     clip: {fileID: 8300000, guid: 10db1b1d1e5a0fe4a9f424509993ada3, type: 3}
-    volume: 1
+    volume: 0.7
   - name: broke
     clip: {fileID: 8300000, guid: ad7376bbeb9bb73489dbd6684b2fe00b, type: 3}
-    volume: 1
+    volume: 0.7
   musicSource: {fileID: 402539665}
   sfxSource: {fileID: 1587649713}
 --- !u!4 &846796923
