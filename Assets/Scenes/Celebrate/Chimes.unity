@@ -152,6 +152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventID: chimesEvent
+  levelCompleteUI: {fileID: 1857627890}
+  delayBeforeShowUI: 0.5
 --- !u!4 &58195392
 Transform:
   m_ObjectHideFlags: 0
@@ -2301,6 +2303,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 798321e8bb253b547b3c334b0a53afcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1857627890 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8828678932725757585, guid: 6900727930fbb0d4680efded4f54b0de, type: 3}
+  m_PrefabInstance: {fileID: 446484676}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1990326595
 GameObject:
   m_ObjectHideFlags: 0
