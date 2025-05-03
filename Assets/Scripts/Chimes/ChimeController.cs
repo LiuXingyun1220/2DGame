@@ -21,23 +21,24 @@ public class ChimeController : MonoBehaviour
 
     private IEnumerator AutoDeactivate()
     {
-        yield return new WaitForSeconds(2f); // 判定窗口时间
+        yield return new WaitForSeconds(1f); // 判定窗口时间
         chimeHighlight.SetActive(false);
         //if (isActive) Debug.Log("错过了");
     }
 
     public void Deactivate()
     {
-        // 生成粒子特效
-        if (deactivateParticlePrefab != null)
+        if (isActive&& deactivateParticlePrefab != null)
         {
+            ScoreManager.Instance.AddScore(1);
             // 在风铃位置生成粒子，自动旋转匹配对象方向
             Instantiate(deactivateParticlePrefab, transform.position, transform.rotation);
 
             // 如果要附加到风铃对象上：
             // Instantiate(deactivateParticlePrefab, transform.position, 
-            //     transform.rotation, transform);
+            //     transform.rot
         }
+
         isActive = false;
         chimeHighlight.SetActive(false);
        

@@ -36,12 +36,8 @@ public class ChimesManager : MonoBehaviour
     {
         if(chimeDict.TryGetValue(id, out ChimeController chime))
         {
-            Judgment judgement=AccuracySystem.Evaluate(accuracy);
-            if (judgement != Judgment.Miss)
-            {
-                chime.Deactivate();
-                //ScoreManager.Instance.AddScore(judgment);
-            }
+            //Judgment judgement=AccuracySystem.Evaluate(accuracy);
+            chime.Deactivate();
         }
     }
 }
