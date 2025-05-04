@@ -305,14 +305,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1203174556}
     m_Modifications:
-    - target: {fileID: 392647968755133999, guid: 90de8d54b5e2f964aa5005938bafdae0, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845562411932403832, guid: 90de8d54b5e2f964aa5005938bafdae0, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2707249359064085669, guid: 90de8d54b5e2f964aa5005938bafdae0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -396,18 +388,6 @@ PrefabInstance:
     - target: {fileID: 2756857909098605217, guid: 90de8d54b5e2f964aa5005938bafdae0, type: 3}
       propertyPath: m_Name
       value: Slot_Bag (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2756857909098605217, guid: 90de8d54b5e2f964aa5005938bafdae0, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4947267340716120303, guid: 90de8d54b5e2f964aa5005938bafdae0, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6938859521321720768, guid: 90de8d54b5e2f964aa5005938bafdae0, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.03645706
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1172,18 +1152,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1203174556}
     m_Modifications:
-    - target: {fileID: -8465679803756743334, guid: 90de8d54b5e2f964aa5005938bafdae0, type: 3}
-      propertyPath: slotHightlight
-      value: 
-      objectReference: {fileID: 2105818242}
-    - target: {fileID: 392647968755133999, guid: 90de8d54b5e2f964aa5005938bafdae0, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845562411932403832, guid: 90de8d54b5e2f964aa5005938bafdae0, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2707249359064085669, guid: 90de8d54b5e2f964aa5005938bafdae0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1268,18 +1236,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slot_Bag
       objectReference: {fileID: 0}
-    - target: {fileID: 2756857909098605217, guid: 90de8d54b5e2f964aa5005938bafdae0, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4947267340716120303, guid: 90de8d54b5e2f964aa5005938bafdae0, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6938859521321720768, guid: 90de8d54b5e2f964aa5005938bafdae0, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.03645706
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1299,17 +1255,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b96d8f6b95f434540aea15c37f794049, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2105818242 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2817230229874565166, guid: 90de8d54b5e2f964aa5005938bafdae0, type: 3}
-  m_PrefabInstance: {fileID: 2105818239}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2115000048
