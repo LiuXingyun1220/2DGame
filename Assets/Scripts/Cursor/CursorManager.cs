@@ -13,6 +13,7 @@ namespace MyGame.Inventory {
         [Header("鼠标指针样式")]
         public Texture2D PointCursor;
         public Texture2D DragCursor;
+        public Texture2D BrushCursor;
 
         private void Start()
         {
@@ -56,12 +57,17 @@ namespace MyGame.Inventory {
 
         public void SetPointCursor()
         {
-            Cursor.SetCursor(PointCursor, new Vector2(16, 16), CursorMode.Auto);
+            Cursor.SetCursor(PointCursor, new Vector2(0, 0), CursorMode.Auto);
         }
 
         public void SetDragCursor()
         {
             Cursor.SetCursor(DragCursor, new Vector2(16, 16), CursorMode.Auto);
+        }
+
+        public void SetBrushCursor()
+        {
+            Cursor.SetCursor(BrushCursor, new Vector2(0, 32), CursorMode.Auto);
         }
     }
 }

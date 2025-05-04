@@ -8,7 +8,7 @@ public class TestLineRenderer : MonoBehaviour
     private List<LineRenderer> lines = new List<LineRenderer>();
     private List<List<BoxCollider2D>> collidersPerLine = new List<List<BoxCollider2D>>();
     private float eraseDistance = 0.5f;
-    private float minWidth = 0.05f, maxWidth = 0.3f; // 线条最细和最粗
+    private float minWidth = 0.04f, maxWidth = 0.3f; // 线条最细和最粗
     private float maxSpeed = 5f;
 
     void Start()
