@@ -9,7 +9,7 @@ public class ClickActivate : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             // Ö±½ÓÇÐ»»¼¤»î×´Ì¬
-            targetObject.SetActive(!targetObject.activeSelf);
+            targetObject.SetActive(true);
         }
     }
 }
