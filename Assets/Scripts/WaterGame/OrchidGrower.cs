@@ -15,9 +15,9 @@ public class OrchidGrower : MonoBehaviour
 
         if (score < 2)
             spriteRenderer.sprite = sproutSprite;
-        else if (score < 4)
+        else if (score < 3)
             spriteRenderer.sprite = youngSprite;
-        else if (score < 5)
+        else if (score < 4)
             spriteRenderer.sprite = matureSprite;
         else
             spriteRenderer.sprite = bloomSprite;

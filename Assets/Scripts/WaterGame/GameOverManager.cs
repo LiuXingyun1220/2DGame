@@ -6,20 +6,25 @@ public class GameOverManager : MonoBehaviour
 {
     public GameObject gameOverPanel; // 游戏结束UI面板
     public GameObject scoreUI;       // 分数Text对象（例如“Score”）
+    public GameObject background;
+    ///public GameObject Water;
+    //public GameObject DirtyWater;
 
     private bool isGameOver = false;
 
     void Start()
     {
+        Data.Score = 0;
         gameOverPanel.SetActive(false);
         scoreUI.SetActive(true);
     }
 
     void Update()
     {
-        int score= score = Data.Score;
+        int score= Data.Score;
         if (!isGameOver && score < 0)
         {
+            background.SetActive(false);
             GameOver();
         }
     }
@@ -27,6 +32,8 @@ public class GameOverManager : MonoBehaviour
     void GameOver()
     {
         isGameOver = true;
+        //Water.SetActive(false);
+        //DirtyWater.SetActive(false);
         gameOverPanel.SetActive(true);  // 显示Game Over
         scoreUI.SetActive(false);       // 隐藏分数字
     }
