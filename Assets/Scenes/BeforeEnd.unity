@@ -443,7 +443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneFrom: BeforeEnd
-  sceneToGo: End
+  sceneToGo: EndBook
 --- !u!61 &861198880
 BoxCollider2D:
   m_ObjectHideFlags: 0
