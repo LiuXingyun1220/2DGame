@@ -68,4 +68,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Celebrate/Chimes.unity
     guid: e3d5b6d6444c5074194a8dee3ab3a0fa
+  - enabled: 1
+    path: Assets/Scenes/BeforeEnd.unity
+    guid: 2a92ce19075cee340a1e29cb6bbccb5b
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: e5edf6dc1d3c9644d9e76518ebc8cb4d
   m_configObjects: {}
