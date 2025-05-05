@@ -42,7 +42,7 @@ public class NPCInteraction : MonoBehaviour
 
         // 直接显示完整文本
         dialogueText.text = isSuccess ?
-            $"<b>{characterName}:</b> {content}" :
-            $"<b>{characterName}:</b>（通讯中断）";
+            $"</b> {content}" :
+            $"</b>（通讯中断）";
     }
 }

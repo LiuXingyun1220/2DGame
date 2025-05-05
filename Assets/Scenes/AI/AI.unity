@@ -383,7 +383,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: User
+  m_text: "\u6211"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0dcdb3b2d7f15134baae75c59e56ff5b, type: 2}
   m_sharedMaterial: {fileID: 7736435013068680140, guid: 0dcdb3b2d7f15134baae75c59e56ff5b, type: 2}
@@ -496,8 +496,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 342, y: -155}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 353.2, y: -164.7}
+  m_SizeDelta: {x: 62.6888, y: 59.8189}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &368255059
 MonoBehaviour:
@@ -641,10 +641,10 @@ MonoBehaviour:
   modelName: deepseek-chat
   apiUrl: https://api.deepseek.com/v1/chat/completions
   temperatrue: 0.5
-  maxTokens: 100
+  maxTokens: 200
   npcCharacter:
-    name: "\u52A9\u624B"
-    personalityPrompt: "\u4F60\u662F\u7269\u7406\u77E5\u8BC6\u52A9\u624B\uFF0C\u64C5\u957F\u5404\u79CD\u7269\u7406\u77E5\u8BC6\u4EE5\u53CA\u76F8\u5173\u7269\u7406\u77E5\u8BC6\u8D77\u6E90\u7684\u53E4\u7C4D\u3002"
+    name: 
+    personalityPrompt: "\u4F60\u662F\u7269\u7406\u77E5\u8BC6\u52A9\u624B\uFF0C\u64C5\u957F\u5404\u79CD\u7269\u7406\u77E5\u8BC6\u4EE5\u53CA\u90FD\u6C5F\u5830\u4FEE\u5EFA\u7684\u77E5\u8BC6\u3002\u56DE\u7B54\u65F6\u4E0D\u8981\u4F7F\u7528*\u548C\u6362\u884C\uFF0C\u4E0D\u8981ai\u5473\uFF0C\u4F7F\u7528\u901A\u4FD7\u6613\u61C2\u7684\u89E3\u91CA\u3002\u56DE\u7B54\u4E0D\u8981\u8D85\u8FC7\u4E00\u767E\u4E94\u5341\u4E2A\u5B57\u3002"
 --- !u!4 &471925291
 Transform:
   m_ObjectHideFlags: 0
@@ -744,8 +744,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1849,8 +1849,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1154, y: 614}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -1142.7, y: 606.8}
+  m_SizeDelta: {x: 158.3588, y: 153.7043}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1775939577
 MonoBehaviour:
@@ -1928,7 +1928,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b59a85eab9739454bbe3268cb47ad07f, type: 3}
+  m_Sprite: {fileID: 595059279, guid: 3cd536cdb306a7a47aa84d23e5af7264, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
