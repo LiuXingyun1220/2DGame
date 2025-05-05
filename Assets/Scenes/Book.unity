@@ -2120,7 +2120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneFrom: Book
-  sceneToGo: AfterBegin
+  sceneToGo: BeforeD_dialog
 --- !u!61 &810160571
 BoxCollider2D:
   m_ObjectHideFlags: 0
