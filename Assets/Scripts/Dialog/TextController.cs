@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UIElements;
+using DG.Tweening;
 
 public class TextController : MonoBehaviour
 {
     // Start is called before the first frame update
     public TMP_Text testText;
+    public Canvas canvas;
 
     IEnumerator TypeText(TMP_Text tMP_Text, string str, float interval)
     {
@@ -17,10 +19,12 @@ public class TextController : MonoBehaviour
             tMP_Text.text = str.Substring(0, i++);
             yield return new WaitForSeconds(interval);
         }
+        
     }
     private void Start()
     {
-        StartCoroutine(TypeText(testText, "ÇĞÎğ¾À²øÁôÓà²¨ \r\n\r\n\r\n\r\nÌì»úĞşÃî²»¿ÉÑÔ", 0.15f));
+        StartCoroutine(TypeText(testText, "Ìì»úĞşÃî²»¿ÉÑÔ\r\n\r\n\r\n\r\nÇĞÎğ¾À²øÁôÓà²¨", 0.25f));
+        
     }
 
 

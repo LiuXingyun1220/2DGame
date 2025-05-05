@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NPC
+  m_text: "\u7CFB\u7EDF"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0dcdb3b2d7f15134baae75c59e56ff5b, type: 2}
   m_sharedMaterial: {fileID: 7736435013068680140, guid: 0dcdb3b2d7f15134baae75c59e56ff5b, type: 2}

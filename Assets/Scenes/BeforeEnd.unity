@@ -335,7 +335,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u5207\u52FF\u7EA0\u7F20\u7559\u4F59\u6CE2 \n\n\n\n\u5929\u673A\u7384\u5999\u4E0D\u53EF\u8A00"
+  m_text: "\u5929\u673A\u7384\u5999\u4E0D\u53EF\u8A00\n\n\n\n\u5207\u52FF\u7EA0\u7F20\u7559\u4F59\u6CE2 "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 529b0b8f4dff0474097bc3ed7b1919b1, type: 2}
   m_sharedMaterial: {fileID: -1362012958991156001, guid: 529b0b8f4dff0474097bc3ed7b1919b1, type: 2}
@@ -344,8 +344,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4279091439
+  m_fontColor: {r: 0.93725497, g: 0.75294125, b: 0.050980397, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
