@@ -60,7 +60,6 @@ public class RockTemperature : MonoBehaviour
         {
             isHeated = true;
             AudioManager.instance.PlaySFX("heat");
-            Debug.Log("加热过了");
           
         }
         if (isHeated && currentTemperature <= freezedThreshold)
@@ -85,7 +84,7 @@ public class RockTemperature : MonoBehaviour
     {
         // 调整显示区域大小以适应新字体（宽度300，高度40）
         GUI.Label(new Rect(10, 10, 300, 40),
-            $"Temperature: {currentTemperature:F1}",
+            $"温度: {currentTemperature:F1}",
             debugStyle);
     }
 }

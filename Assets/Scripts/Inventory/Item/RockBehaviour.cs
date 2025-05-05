@@ -143,7 +143,7 @@ public class RockBehaviour : MonoBehaviour
         TextMeshProUGUI text = levelCompleteUI.GetComponentInChildren<TextMeshProUGUI>();
         if (text.name.Contains("TimeText"))
         {
-            text.text = string.Format("完成时间: {0:0.00}秒", totalTime);
+            text.text = string.Format("完成用时: {0:0.00}秒", totalTime);
         }
 
         // 此处还可以添加其他统计信息，比如分数、星级等
