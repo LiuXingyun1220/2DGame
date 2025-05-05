@@ -278,6 +278,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testText: {fileID: 583214674}
+  fadeInDuration: 0.5
+  fadeOutDuration: 4
+  delayBeforeFadeOut: 1
 --- !u!1 &583214672
 GameObject:
   m_ObjectHideFlags: 0
