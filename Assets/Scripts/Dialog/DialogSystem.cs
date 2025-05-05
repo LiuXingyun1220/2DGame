@@ -111,7 +111,7 @@ public class DialogSystem : MonoBehaviour
                 nameLabel.text = textList[index];
                 index++;
                 break;
-            case "NPC":
+            case "ϵͳ":
                 OtherLocation();
                 avatar.sprite = Physicist;
                 nameLabel.text = textList[index];
