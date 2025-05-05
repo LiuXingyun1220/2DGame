@@ -73,7 +73,7 @@ public class RockTemperature : MonoBehaviour
     {
         RockBehaviour rockBehaviour=GetComponent<RockBehaviour>();
         rockBehaviour.StartBreakAnimation();
-        AudioManager.instance.PlaySFX("heat");
+        AudioManager.instance.PlaySFX("broke");
         //Debug.Log("ฦฦมัมห");
     }
 

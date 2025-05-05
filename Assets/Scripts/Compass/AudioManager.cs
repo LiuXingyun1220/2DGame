@@ -19,6 +19,20 @@ public class AudioManager : Singleton<AudioManager>
 
     // 音乐和音效的AudioSource
     public AudioSource musicSource, sfxSource;
+    public void StopMusic()
+    {
+        if (musicSource == null)
+        {
+            Debug.LogError("音乐AudioSource未初始化！");
+            return;
+        }
+
+        if (musicSource.isPlaying)
+        {
+            musicSource.Stop();
+            musicSource.clip = null; // 清除当前音频剪辑
+        }
+    }
 
     // 播放音乐的方法，参数为音乐名称
     public void PlayMusic(string name)
@@ -75,4 +89,5 @@ public class AudioManager : Singleton<AudioManager>
     {
         sfxSource.volume = volume;
     }
+
 }

@@ -40,7 +40,7 @@ public class DeepSeekAPI : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        SendMessageToDeepSeek("ÄãºÃ°¡", null);
+        //SendMessageToDeepSeek("ÄãºÃ°¡", null);
     }
     public void SendMessageToDeepSeek(string message, DialogueCallback callback)
     {
