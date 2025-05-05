@@ -9,7 +9,7 @@ public class Teleport : MonoBehaviour
 
     public void TeleportToScene()
     {
-        Debug.Log("ÇÐ»»°É");
         TransitionManager.Instance.Transition(sceneFrom, sceneToGo);
     }
+
 }

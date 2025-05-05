@@ -11,6 +11,6 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "分数:" + Data.Score.ToString();
+        scoreText.text = "进度:" + Data.Score.ToString()+"/5";
     }
 }

@@ -16,6 +16,8 @@ public class TransitionManager : Singleton<TransitionManager>
             StartCoroutine(TransitionToScene(from, to));
         }
     }
+
+
     private IEnumerator TransitionToScene(string from, string to)
     {
         yield return Fade(1);
