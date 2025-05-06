@@ -7,6 +7,7 @@ public class MusicEnd : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AudioManager.instance.ToggleMusic();
         AudioManager.instance.PlayMusic("game");
     }
 

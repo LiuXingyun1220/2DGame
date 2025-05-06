@@ -543,6 +543,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7346743160015513810, guid: 59f3ab09d735f9c43b8f4bf9db98e35a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1352540976}
+    - targetCorrespondingSourceObject: {fileID: 7346743160015513810, guid: 59f3ab09d735f9c43b8f4bf9db98e35a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1352540977}
   m_SourcePrefab: {fileID: 100100000, guid: 59f3ab09d735f9c43b8f4bf9db98e35a, type: 3}
 --- !u!1 &1352540972 stripped
 GameObject:
@@ -566,6 +569,18 @@ MonoBehaviour:
   imagesToHide: []
   bookPro: {fileID: 0}
   minimumPageRequired: 0
+--- !u!114 &1352540977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352540972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf30f9efc2d7104ebe7403d0cc58654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1372333342 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5745589414382584912, guid: 59f3ab09d735f9c43b8f4bf9db98e35a, type: 3}
