@@ -885,7 +885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &262763253
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4411,37 +4411,37 @@ PrefabInstance:
       addedObject: {fileID: 246356122}
     - targetCorrespondingSourceObject: {fileID: 224000010976852724, guid: 3b11136cfd0d23540940791a20f3e1de, type: 3}
       insertIndex: 1
-      addedObject: {fileID: 674752554}
+      addedObject: {fileID: 262763253}
     - targetCorrespondingSourceObject: {fileID: 224000010976852724, guid: 3b11136cfd0d23540940791a20f3e1de, type: 3}
       insertIndex: 2
-      addedObject: {fileID: 914765634}
+      addedObject: {fileID: 674752554}
     - targetCorrespondingSourceObject: {fileID: 224000010976852724, guid: 3b11136cfd0d23540940791a20f3e1de, type: 3}
       insertIndex: 3
-      addedObject: {fileID: 1660712709}
+      addedObject: {fileID: 914765634}
     - targetCorrespondingSourceObject: {fileID: 224000010976852724, guid: 3b11136cfd0d23540940791a20f3e1de, type: 3}
       insertIndex: 4
-      addedObject: {fileID: 1081084469}
+      addedObject: {fileID: 1660712709}
     - targetCorrespondingSourceObject: {fileID: 224000010976852724, guid: 3b11136cfd0d23540940791a20f3e1de, type: 3}
       insertIndex: 5
-      addedObject: {fileID: 1425448317}
+      addedObject: {fileID: 1081084469}
     - targetCorrespondingSourceObject: {fileID: 224000010976852724, guid: 3b11136cfd0d23540940791a20f3e1de, type: 3}
       insertIndex: 6
-      addedObject: {fileID: 1659209753}
+      addedObject: {fileID: 1425448317}
     - targetCorrespondingSourceObject: {fileID: 224000010976852724, guid: 3b11136cfd0d23540940791a20f3e1de, type: 3}
       insertIndex: 7
-      addedObject: {fileID: 1204349493}
+      addedObject: {fileID: 1659209753}
     - targetCorrespondingSourceObject: {fileID: 224000010976852724, guid: 3b11136cfd0d23540940791a20f3e1de, type: 3}
       insertIndex: 8
-      addedObject: {fileID: 1511883818}
+      addedObject: {fileID: 1204349493}
     - targetCorrespondingSourceObject: {fileID: 224000010976852724, guid: 3b11136cfd0d23540940791a20f3e1de, type: 3}
       insertIndex: 9
-      addedObject: {fileID: 560436712}
+      addedObject: {fileID: 1511883818}
     - targetCorrespondingSourceObject: {fileID: 224000010976852724, guid: 3b11136cfd0d23540940791a20f3e1de, type: 3}
       insertIndex: 10
-      addedObject: {fileID: 1824034337}
+      addedObject: {fileID: 560436712}
     - targetCorrespondingSourceObject: {fileID: 224000010976852724, guid: 3b11136cfd0d23540940791a20f3e1de, type: 3}
       insertIndex: 11
-      addedObject: {fileID: 262763253}
+      addedObject: {fileID: 1824034337}
     - targetCorrespondingSourceObject: {fileID: 224000010976852724, guid: 3b11136cfd0d23540940791a20f3e1de, type: 3}
       insertIndex: 12
       addedObject: {fileID: 1815360727}
@@ -5406,10 +5406,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 2560, y: 1440}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
