@@ -19,6 +19,7 @@ public class ScoreManager : MonoBehaviour
 
     [Header("UI References")]
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI scoreText1;
     //[SerializeField] private TextMeshProUGUI comboText;
     //[SerializeField] private TextMeshProUGUI multiplierText;
     //[SerializeField] private TextMeshProUGUI judgmentText;
@@ -130,6 +131,10 @@ public class ScoreManager : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.text = $"得分: {currentScore}";
+        }
+        if (scoreText1 != null)
+        {
+            scoreText1.text = $"得分: {currentScore}";
         }
     }
 
