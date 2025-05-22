@@ -6196,7 +6196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82971e1a1db717545bb404df0e1d6ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brushMaterial: {fileID: 2100000, guid: 10280abf95560774db6e3053ed842cf4, type: 2}
+  brushMaterial: {fileID: 2100000, guid: d8c02d7980254a540969ea2786953bef, type: 2}
 --- !u!4 &1289700491
 Transform:
   m_ObjectHideFlags: 0
