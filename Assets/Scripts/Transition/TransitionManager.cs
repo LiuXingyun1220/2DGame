@@ -8,6 +8,8 @@ public class TransitionManager : Singleton<TransitionManager>
     public CanvasGroup fadeCanvasGroup;//淡出画布
     public float fadeDuration;//淡出持续时间
     private bool isFade;//是否淡出
+    public GameObject cloudGroup;
+
     //场景切换
     public void Transition(string from, string to)
     {
@@ -20,6 +22,7 @@ public class TransitionManager : Singleton<TransitionManager>
 
     private IEnumerator TransitionToScene(string from, string to)
     {
+        cloudGroup.SetActive(false);
         yield return Fade(1);
 
         yield return SceneManager.UnloadSceneAsync(from);
@@ -29,11 +32,13 @@ public class TransitionManager : Singleton<TransitionManager>
         Scene newScene = SceneManager.GetSceneAt(SceneManager.sceneCount - 1);
         SceneManager.SetActiveScene(newScene);
 
+        cloudGroup.SetActive(true);
         yield return Fade(0);
     }
     //淡出
     private IEnumerator Fade(float targetAlpha)
     {
+        
         isFade = true;
         fadeCanvasGroup.blocksRaycasts = true;//隐藏鼠标点击
         float speed = Mathf.Abs(fadeCanvasGroup.alpha - targetAlpha) / fadeDuration;//淡出速度
