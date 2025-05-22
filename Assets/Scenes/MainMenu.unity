@@ -374,6 +374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneFrom: MainMenu
   sceneToGo: Book
+  trasitionType: 1
 --- !u!1 &646389318
 GameObject:
   m_ObjectHideFlags: 0

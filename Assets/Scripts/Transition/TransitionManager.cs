@@ -5,49 +5,55 @@ using UnityEngine.SceneManagement;
 
 public class TransitionManager : Singleton<TransitionManager>
 {
+    private ITransitionStrategy _strategy;
+    public bool isFade;//是否淡出
     public CanvasGroup fadeCanvasGroup;//淡出画布
     public float fadeDuration;//淡出持续时间
-    private bool isFade;//是否淡出
-    public GameObject cloudGroup;
+
+    //public GameObject cloudGroup;
+    public void SetTransitionStrategy(ITransitionStrategy strategy)
+    {
+        _strategy = strategy;
+    }
 
     //场景切换
     public void Transition(string from, string to)
     {
-        if (!isFade)
+        if (!isFade&&_strategy!=null)
         {
-            StartCoroutine(TransitionToScene(from, to));
+            StartCoroutine(_strategy.StartTransition(this,from,to));
         }
     }
 
 
-    private IEnumerator TransitionToScene(string from, string to)
-    {
-        cloudGroup.SetActive(false);
-        yield return Fade(1);
+    //private IEnumerator TransitionToScene(string from, string to)
+    //{
+    //    cloudGroup.SetActive(false);
+    //    yield return Fade(1);
 
-        yield return SceneManager.UnloadSceneAsync(from);
-        yield return SceneManager.LoadSceneAsync(to, LoadSceneMode.Additive);
+    //    yield return SceneManager.UnloadSceneAsync(from);
+    //    yield return SceneManager.LoadSceneAsync(to, LoadSceneMode.Additive);
 
-        //设置新场景为激活场景
-        Scene newScene = SceneManager.GetSceneAt(SceneManager.sceneCount - 1);
-        SceneManager.SetActiveScene(newScene);
+    //    //设置新场景为激活场景
+    //    Scene newScene = SceneManager.GetSceneAt(SceneManager.sceneCount - 1);
+    //    SceneManager.SetActiveScene(newScene);
 
-        cloudGroup.SetActive(true);
-        yield return Fade(0);
-    }
-    //淡出
-    private IEnumerator Fade(float targetAlpha)
-    {
-        
-        isFade = true;
-        fadeCanvasGroup.blocksRaycasts = true;//隐藏鼠标点击
-        float speed = Mathf.Abs(fadeCanvasGroup.alpha - targetAlpha) / fadeDuration;//淡出速度
-        while (!Mathf.Approximately(fadeCanvasGroup.alpha, targetAlpha))
-        {
-            fadeCanvasGroup.alpha = Mathf.MoveTowards(fadeCanvasGroup.alpha, targetAlpha, speed * Time.deltaTime);
-            yield return null;
-        }
-        fadeCanvasGroup.blocksRaycasts = false;
-        isFade = false;
-    }
+    //    cloudGroup.SetActive(true);
+    //    yield return Fade(0);
+    //}
+    ////淡出
+    //private IEnumerator Fade(float targetAlpha)
+    //{
+
+    //    isFade = true;
+    //    fadeCanvasGroup.blocksRaycasts = true;//隐藏鼠标点击
+    //    float speed = Mathf.Abs(fadeCanvasGroup.alpha - targetAlpha) / fadeDuration;//淡出速度
+    //    while (!Mathf.Approximately(fadeCanvasGroup.alpha, targetAlpha))
+    //    {
+    //        fadeCanvasGroup.alpha = Mathf.MoveTowards(fadeCanvasGroup.alpha, targetAlpha, speed * Time.deltaTime);
+    //        yield return null;
+    //    }
+    //    fadeCanvasGroup.blocksRaycasts = false;
+    //    isFade = false;
+    //}
 }

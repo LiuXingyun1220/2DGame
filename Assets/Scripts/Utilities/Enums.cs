@@ -12,3 +12,8 @@ public enum InventoryLocation
 {
     None,Player
 }
+
+public enum TrasitionType
+{
+    None,BlackFacde
+}
