@@ -6090,7 +6090,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u8FDB\u5EA6\uFF1A0/4"
+  m_text: "\u8FDB\u5EA6\uFF1A0/5"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0dcdb3b2d7f15134baae75c59e56ff5b, type: 2}
   m_sharedMaterial: {fileID: 7736435013068680140, guid: 0dcdb3b2d7f15134baae75c59e56ff5b, type: 2}
@@ -6196,7 +6196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82971e1a1db717545bb404df0e1d6ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  water: {fileID: 166429229}
+  brushMaterial: {fileID: 2100000, guid: 10280abf95560774db6e3053ed842cf4, type: 2}
 --- !u!4 &1289700491
 Transform:
   m_ObjectHideFlags: 0

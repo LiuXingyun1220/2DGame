@@ -3,13 +3,12 @@ using System.Collections.Generic;
 
 public class TestLineRenderer : MonoBehaviour
 {
-    public GameObject water;
+    public Material brushMaterial; // 自定义毛笔材质，需在 Inspector 中指定
     private Vector3 lastPos;
     private List<LineRenderer> lines = new List<LineRenderer>();
     private List<List<BoxCollider2D>> collidersPerLine = new List<List<BoxCollider2D>>();
     private float eraseDistance = 0.5f;
-    private float minWidth = 0.05f, maxWidth = 0.3f; // 线条最细和最粗
-    private float maxSpeed = 5f;
+    private float minWidth = 0.05f, maxWidth = 0.3f;
 
     void Start()
     {
@@ -29,10 +28,23 @@ public class TestLineRenderer : MonoBehaviour
         newLine.transform.SetParent(transform);
         newLine.positionCount = 0;
         newLine.loop = false;
-        newLine.material = new Material(Shader.Find("Sprites/Default"));
+
+        // 使用毛笔材质（必须手动赋值）
+        if (brushMaterial != null)
+        {
+            newLine.material = brushMaterial;
+        }
+        else
+        {
+            Debug.LogWarning("请在 Inspector 指定 brushMaterial 材质！");
+            newLine.material = new Material(Shader.Find("Sprites/Default"));
+        }
+
+        // 关键参数，确保线条显示纹理和颜色渐变
         newLine.colorGradient = GetBrushGradient();
-        newLine.numCapVertices = 5;
-        newLine.widthMultiplier = 1f; // 让 `widthCurve` 生效
+        newLine.numCapVertices = 5;        // 端点圆滑
+        newLine.widthMultiplier = 1f;      // 允许 widthCurve 起作用
+        newLine.textureMode = LineTextureMode.Tile;  // 纹理平铺，否则会拉伸导致毛笔纹理失真
 
         lines.Add(newLine);
         collidersPerLine.Add(new List<BoxCollider2D>());
@@ -55,24 +67,20 @@ public class TestLineRenderer : MonoBehaviour
                 currentLine.positionCount += 1;
                 currentLine.SetPosition(currentLine.positionCount - 1, nowPos);
 
-                UpdateWidthCurve(currentLine); // 更新笔触宽度
+                UpdateWidthCurve(currentLine);
                 lastPos = nowPos;
             }
         }
     }
 
-    /// <summary>
-    /// 根据线条长度调整宽度曲线
-    /// </summary>
     void UpdateWidthCurve(LineRenderer line)
     {
-        int pointCount = line.positionCount;
-        if (pointCount < 2) return;
+        if (line.positionCount < 2) return;
 
         AnimationCurve widthCurve = new AnimationCurve();
-        widthCurve.AddKey(0f, 1.0f); // 起点最粗
-        widthCurve.AddKey(0.5f, 0.7f); // 中间稍微变细
-        widthCurve.AddKey(1f, 0.1f); // 尾部变细
+        widthCurve.AddKey(0f, 1.0f);
+        widthCurve.AddKey(0.5f, 0.7f);
+        widthCurve.AddKey(1f, 0.1f);
 
         line.widthCurve = widthCurve;
         line.startWidth = maxWidth;
