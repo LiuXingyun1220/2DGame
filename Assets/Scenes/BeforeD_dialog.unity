@@ -738,6 +738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneFrom: BeforeD_dialog
   sceneToGo: Compass
+  trasitionType: 2
 --- !u!61 &2039289819
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -283,8 +283,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27475090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.8109186, y: 3.2871082, z: 2.6148078}
+  m_LocalPosition: {x: 0, y: 0, z: -15.376968}
+  m_LocalScale: {x: 1.369873, y: 1.6019393, z: 1.2743005}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2002425134}
@@ -301,7 +301,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1282.5801, y: -12}
+  m_AnchoredPosition: {x: 436, y: -44}
   m_SizeDelta: {x: 1350, y: 445}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &27475092
@@ -655,6 +655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneFrom: FeiShaYan_Book
   sceneToGo: Compass
+  trasitionType: 2
 --- !u!61 &338731636
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1612,15 +1613,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920630833}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.2487347, y: 3.999425, z: 2.6148078}
+  m_LocalPosition: {x: 0, y: 0, z: 33.75959}
+  m_LocalScale: {x: 1.0958984, y: 1.6254935, z: 1.2743005}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1086789744}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -134.05997, y: -12}
+  m_AnchoredPosition: {x: 932, y: -40.247}
   m_SizeDelta: {x: 923.51, y: 445}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1920630835

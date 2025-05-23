@@ -849,6 +849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneFrom: YuZui_Book
   sceneToGo: Compass
+  trasitionType: 2
 --- !u!1 &1008633008
 GameObject:
   m_ObjectHideFlags: 0

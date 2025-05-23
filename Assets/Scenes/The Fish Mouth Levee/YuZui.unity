@@ -229,7 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneFrom: YuZui
   sceneToGo: Compass
-  trasitionType: 0
+  trasitionType: 2
 --- !u!61 &44681745
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6390,7 +6390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneFrom: YuZui
   sceneToGo: D_yuzui_E
-  trasitionType: 0
+  trasitionType: 2
 --- !u!61 &1986983825
 BoxCollider2D:
   m_ObjectHideFlags: 0
