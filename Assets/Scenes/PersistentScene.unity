@@ -1243,8 +1243,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFade: 0
-  fadeCanvasGroup: {fileID: 18439425}
+  fadePanel: {fileID: 18439423}
   fadeDuration: 1
+  cloudGroup: {fileID: 1259151737}
 --- !u!4 &1810795112
 Transform:
   m_ObjectHideFlags: 0
