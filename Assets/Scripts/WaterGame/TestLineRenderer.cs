@@ -42,7 +42,8 @@ public class TestLineRenderer : MonoBehaviour
     }
 
     newLine.colorGradient = GetBrushGradient();
-    newLine.numCapVertices = 5;
+    //newLine.numCapVertices = 5;
+    newLine.numCapVertices = 0;
     newLine.widthMultiplier = 1f;
 
     lines.Add(newLine);
@@ -81,7 +82,7 @@ public class TestLineRenderer : MonoBehaviour
         //if (pointCount < 2) return;
 
         //AnimationCurve widthCurve = new AnimationCurve();
-       //widthCurve.AddKey(0f, 1.0f); // 起点最粗
+        //widthCurve.AddKey(0f, 1.0f); // 起点最粗
         //widthCurve.AddKey(0.5f, 0.7f); // 中间稍微变细
         //widthCurve.AddKey(1f, 0.1f); // 尾部变细
 
