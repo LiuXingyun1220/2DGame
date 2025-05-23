@@ -308,6 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneFrom: D_yuzui_B
   sceneToGo: YuZui
+  trasitionType: 2
 --- !u!61 &2064126296
 BoxCollider2D:
   m_ObjectHideFlags: 0

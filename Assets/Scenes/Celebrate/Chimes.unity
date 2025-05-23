@@ -1175,6 +1175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneFrom: Chimes
   sceneToGo: D_music_E
+  trasitionType: 2
 --- !u!4 &790587378
 Transform:
   m_ObjectHideFlags: 0

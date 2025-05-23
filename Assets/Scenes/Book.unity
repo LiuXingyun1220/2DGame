@@ -2121,6 +2121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneFrom: Book
   sceneToGo: BeforeD_dialog
+  trasitionType: 2
 --- !u!61 &810160571
 BoxCollider2D:
   m_ObjectHideFlags: 0

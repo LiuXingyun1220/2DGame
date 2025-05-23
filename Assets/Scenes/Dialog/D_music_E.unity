@@ -263,6 +263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneFrom: D_music_E
   sceneToGo: BeforeEnd
+  trasitionType: 2
 --- !u!61 &440134702
 BoxCollider2D:
   m_ObjectHideFlags: 0
