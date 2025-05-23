@@ -3,12 +3,14 @@ using System.Collections.Generic;
 
 public class TestLineRenderer : MonoBehaviour
 {
-    public Material brushMaterial; 
+    public GameObject water;
+    public Material customBrushMaterial; // æ·»åŠ æ­¤å­—æ®µä»¥åœ¨ Inspector ä¸­è®¾ç½®æè´¨
     private Vector3 lastPos;
     private List<LineRenderer> lines = new List<LineRenderer>();
     private List<List<BoxCollider2D>> collidersPerLine = new List<List<BoxCollider2D>>();
     private float eraseDistance = 0.5f;
-    private float lineWidth = 2f;  // ÏßÌõ¿í¶È£¬5Ì«´ÖÁË£¬¸ÄÎª0.1±È½ÏºÏÊÊ£¬°´Ğèµ÷½Ú
+    private float minWidth = 3f, maxWidth = 3f; // çº¿æ¡æœ€ç»†å’Œæœ€ç²—
+    private float maxSpeed = 5f;
 
     void Start()
     {
@@ -23,31 +25,29 @@ public class TestLineRenderer : MonoBehaviour
     }
 
     void CreateNewLine()
+{
+    LineRenderer newLine = new GameObject("Line").AddComponent<LineRenderer>();
+    newLine.transform.SetParent(transform);
+    newLine.positionCount = 0;
+    newLine.loop = false;
+
+    // ä½¿ç”¨è‡ªå®šä¹‰æè´¨ï¼ˆå¯åœ¨ Inspector æ‹–æ‹½è®¾ç½®ï¼‰
+    if (customBrushMaterial != null)
     {
-        LineRenderer newLine = new GameObject("Line").AddComponent<LineRenderer>();
-        newLine.transform.SetParent(transform);
-        newLine.positionCount = 0;
-        newLine.loop = false;
-
-        if (brushMaterial != null)
-        {
-            newLine.material = new Material(brushMaterial);  // ÊµÀı»¯²ÄÖÊ·ÀÖ¹³åÍ»
-        }
-        else
-        {
-            newLine.material = new Material(Shader.Find("Sprites/Default"));
-        }
-
-        SetSolidColorGradient(newLine, Color.black);
-        newLine.numCapVertices = 10; // Ô²»¬¶Ëµã
-        newLine.widthMultiplier = 1f;
-        newLine.textureMode = LineTextureMode.Stretch;
-
-        SetWidthCurve(newLine, lineWidth);
-
-        lines.Add(newLine);
-        collidersPerLine.Add(new List<BoxCollider2D>());
+        newLine.material = new Material(customBrushMaterial);
     }
+    else
+    {
+        newLine.material = new Material(Shader.Find("Sprites/Default"));
+    }
+
+    newLine.colorGradient = GetBrushGradient();
+    newLine.numCapVertices = 5;
+    newLine.widthMultiplier = 1f;
+
+    lines.Add(newLine);
+    collidersPerLine.Add(new List<BoxCollider2D>());
+}
 
     void DrawLine()
     {
@@ -60,45 +60,39 @@ public class TestLineRenderer : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             Vector3 nowPos = GetMouseWorldPos();
-            if (Vector3.Distance(nowPos, lastPos) > 0.005f)
+            if (Vector3.Distance(nowPos, lastPos) > 0.01f)
             {
                 LineRenderer currentLine = lines[lines.Count - 1];
                 currentLine.positionCount += 1;
                 currentLine.SetPosition(currentLine.positionCount - 1, nowPos);
 
-                // ±£³Ö¿í¶ÈÇúÏßÒ»ÖÂ
-                SetWidthCurve(currentLine, lineWidth);
-
+                UpdateWidthCurve(currentLine); // æ›´æ–°ç¬”è§¦å®½åº¦
                 lastPos = nowPos;
             }
         }
     }
 
-    void SetWidthCurve(LineRenderer line, float width)
+    /// <summary>
+    /// æ ¹æ®çº¿æ¡é•¿åº¦è°ƒæ•´å®½åº¦æ›²çº¿
+    /// </summary>
+    void UpdateWidthCurve(LineRenderer line)
     {
-        AnimationCurve widthCurve = new AnimationCurve(
-            new Keyframe(0f, width),
-            new Keyframe(1f, width)
-        );
-        line.widthCurve = widthCurve;
-        line.startWidth = width;
-        line.endWidth = width;
-    }
+        //int pointCount = line.positionCount;
+        //if (pointCount < 2) return;
 
-    void SetSolidColorGradient(LineRenderer line, Color color)
-    {
-        Gradient gradient = new Gradient();
-        gradient.SetKeys(
-            new GradientColorKey[] {
-                new GradientColorKey(color, 0f),
-                new GradientColorKey(color, 1f)
-            },
-            new GradientAlphaKey[] {
-                new GradientAlphaKey(1f, 0f),
-                new GradientAlphaKey(1f, 1f)
-            }
-        );
-        line.colorGradient = gradient;
+        //AnimationCurve widthCurve = new AnimationCurve();
+       //widthCurve.AddKey(0f, 1.0f); // èµ·ç‚¹æœ€ç²—
+        //widthCurve.AddKey(0.5f, 0.7f); // ä¸­é—´ç¨å¾®å˜ç»†
+        //widthCurve.AddKey(1f, 0.1f); // å°¾éƒ¨å˜ç»†
+
+        //line.widthCurve = widthCurve;
+        //line.startWidth = maxWidth;
+        //line.endWidth = minWidth;
+
+	// ä¿æŒå¤´å°¾ä¸€è‡´å®½åº¦ï¼Œç¡®ä¿èµ·ç‚¹ç»ˆç‚¹å¯è§
+    	line.widthCurve = AnimationCurve.Constant(0, 1, 1);
+   	line.startWidth = maxWidth;
+    	line.endWidth = maxWidth;
     }
 
     void EraseLine()
@@ -154,16 +148,33 @@ public class TestLineRenderer : MonoBehaviour
                 BoxCollider2D collider = colliderObject.AddComponent<BoxCollider2D>();
                 collider.transform.SetParent(transform);
                 collider.offset = (pointA + pointB) / 2;
-                collider.size = new Vector2(length, lineWidth); // ÓÃlineWidth×÷ºñ¶È
+                collider.size = new Vector2(length, 0.1f);
                 colliders.Add(collider);
             }
         }
     }
 
+   Gradient GetBrushGradient()
+{
+    Gradient gradient = new Gradient();
+    gradient.SetKeys(
+        new GradientColorKey[] {
+            new GradientColorKey(Color.black, 0.0f),
+            new GradientColorKey(Color.black, 1.0f)
+        },
+        new GradientAlphaKey[] {
+            new GradientAlphaKey(1.0f, 0.0f),
+            new GradientAlphaKey(1.0f, 1.0f)
+        }
+    );
+    return gradient;
+}
+
+
     Vector3 GetMouseWorldPos()
     {
         Vector3 pos = Input.mousePosition;
-        pos.z = 5f;
+        pos.z = 5;
         return Camera.main.ScreenToWorldPoint(pos);
     }
 }
