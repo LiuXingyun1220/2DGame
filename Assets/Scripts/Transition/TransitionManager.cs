@@ -17,6 +17,7 @@ public class TransitionManager : Singleton<TransitionManager>
     [Header("º”‘ÿΩÁ√Ê")]
     public GameObject cloudGroup;
     public Slider progressSlider;
+    public Sprite backgroundImage;
 
 
     public void SetTransitionStrategy(ITransitionStrategy strategy)
