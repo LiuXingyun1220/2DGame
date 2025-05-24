@@ -92,7 +92,7 @@ public class TestLineRenderer : MonoBehaviour
 
 	// 保持头尾一致宽度，确保起点终点可见
     	line.widthCurve = AnimationCurve.Constant(0, 1, 1);
-   	line.startWidth = maxWidth;
+        line.startWidth = maxWidth;
     	line.endWidth = maxWidth;
     }
 
