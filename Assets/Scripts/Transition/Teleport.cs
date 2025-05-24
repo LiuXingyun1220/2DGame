@@ -26,6 +26,8 @@ public class Teleport : MonoBehaviour
                 return new BlackFadeStrategy();
             case TransitionType.CloudFade:
                 return new CloudFadeStrategy();
+            case TransitionType.LoadingBar:
+                return new LoadingBarStrategy();
             default:
                 return new BlackFadeStrategy(); // 默认使用淡入淡出
         }

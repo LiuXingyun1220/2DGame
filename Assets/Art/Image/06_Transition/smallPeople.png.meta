@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 962c133fa3739a7409101258ec02ba0f
+guid: 64f128a754c83904888f26e71eadd1b7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,7 +95,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: smallPeople_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1200
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e74b81987a85e42963bbeb1f6112e3
+      internalID: -1538050814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smallPeople_1
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 1200
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1921e7197e54834fa79b2fd187f43c8
+      internalID: -1632155294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +148,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      smallPeople_0: -1538050814
+      smallPeople_1: -1632155294
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

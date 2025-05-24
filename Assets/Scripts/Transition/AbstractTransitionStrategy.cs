@@ -12,7 +12,6 @@ public abstract class AbstractTransitionStrategy : ITransitionStrategy
 
         // 卸载旧场景
         yield return SceneManager.UnloadSceneAsync(fromScene);
-        Debug.Log("卸载了");
 
         // 加载新场景
         yield return SceneManager.LoadSceneAsync(toScene, LoadSceneMode.Additive);

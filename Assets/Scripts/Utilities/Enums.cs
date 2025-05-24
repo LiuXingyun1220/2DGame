@@ -15,5 +15,5 @@ public enum InventoryLocation
 
 public enum TransitionType
 {
-    None,BlackFacde,CloudFade
+    None,BlackFacde,CloudFade,LoadingBar
 }
