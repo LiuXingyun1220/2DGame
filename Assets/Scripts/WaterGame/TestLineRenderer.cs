@@ -4,11 +4,12 @@ using System.Collections.Generic;
 public class TestLineRenderer : MonoBehaviour
 {
     public GameObject water;
+    public Material customBrushMaterial; // æ·»åŠ æ­¤å­—æ®µä»¥åœ¨ Inspector ä¸­è®¾ç½®æè´¨
     private Vector3 lastPos;
     private List<LineRenderer> lines = new List<LineRenderer>();
     private List<List<BoxCollider2D>> collidersPerLine = new List<List<BoxCollider2D>>();
     private float eraseDistance = 0.5f;
-    private float minWidth = 0.05f, maxWidth = 0.3f; // ÏßÌõ×îÏ¸ºÍ×î´Ö
+    private float minWidth = 3f, maxWidth = 3f; // çº¿æ¡æœ€ç»†å’Œæœ€ç²—
     private float maxSpeed = 5f;
 
     void Start()
@@ -24,19 +25,30 @@ public class TestLineRenderer : MonoBehaviour
     }
 
     void CreateNewLine()
-    {
-        LineRenderer newLine = new GameObject("Line").AddComponent<LineRenderer>();
-        newLine.transform.SetParent(transform);
-        newLine.positionCount = 0;
-        newLine.loop = false;
-        newLine.material = new Material(Shader.Find("Sprites/Default"));
-        newLine.colorGradient = GetBrushGradient();
-        newLine.numCapVertices = 5;
-        newLine.widthMultiplier = 1f; // ÈÃ `widthCurve` ÉúĞ§
+{
+    LineRenderer newLine = new GameObject("Line").AddComponent<LineRenderer>();
+    newLine.transform.SetParent(transform);
+    newLine.positionCount = 0;
+    newLine.loop = false;
 
-        lines.Add(newLine);
-        collidersPerLine.Add(new List<BoxCollider2D>());
+    // ä½¿ç”¨è‡ªå®šä¹‰æè´¨ï¼ˆå¯åœ¨ Inspector æ‹–æ‹½è®¾ç½®ï¼‰
+    if (customBrushMaterial != null)
+    {
+        newLine.material = new Material(customBrushMaterial);
     }
+    else
+    {
+        newLine.material = new Material(Shader.Find("Sprites/Default"));
+    }
+
+    newLine.colorGradient = GetBrushGradient();
+    //newLine.numCapVertices = 5;
+    newLine.numCapVertices = 0;
+    newLine.widthMultiplier = 1f;
+
+    lines.Add(newLine);
+    collidersPerLine.Add(new List<BoxCollider2D>());
+}
 
     void DrawLine()
     {
@@ -55,28 +67,33 @@ public class TestLineRenderer : MonoBehaviour
                 currentLine.positionCount += 1;
                 currentLine.SetPosition(currentLine.positionCount - 1, nowPos);
 
-                UpdateWidthCurve(currentLine); // ¸üĞÂ±Ê´¥¿í¶È
+                UpdateWidthCurve(currentLine); // æ›´æ–°ç¬”è§¦å®½åº¦
                 lastPos = nowPos;
             }
         }
     }
 
     /// <summary>
-    /// ¸ù¾İÏßÌõ³¤¶Èµ÷Õû¿í¶ÈÇúÏß
+    /// æ ¹æ®çº¿æ¡é•¿åº¦è°ƒæ•´å®½åº¦æ›²çº¿
     /// </summary>
     void UpdateWidthCurve(LineRenderer line)
     {
-        int pointCount = line.positionCount;
-        if (pointCount < 2) return;
+        //int pointCount = line.positionCount;
+        //if (pointCount < 2) return;
 
-        AnimationCurve widthCurve = new AnimationCurve();
-        widthCurve.AddKey(0f, 1.0f); // Æğµã×î´Ö
-        widthCurve.AddKey(0.5f, 0.7f); // ÖĞ¼äÉÔÎ¢±äÏ¸
-        widthCurve.AddKey(1f, 0.1f); // Î²²¿±äÏ¸
+        //AnimationCurve widthCurve = new AnimationCurve();
+        //widthCurve.AddKey(0f, 1.0f); // èµ·ç‚¹æœ€ç²—
+        //widthCurve.AddKey(0.5f, 0.7f); // ä¸­é—´ç¨å¾®å˜ç»†
+        //widthCurve.AddKey(1f, 0.1f); // å°¾éƒ¨å˜ç»†
 
-        line.widthCurve = widthCurve;
+        //line.widthCurve = widthCurve;
+        //line.startWidth = maxWidth;
+        //line.endWidth = minWidth;
+
+	// ä¿æŒå¤´å°¾ä¸€è‡´å®½åº¦ï¼Œç¡®ä¿èµ·ç‚¹ç»ˆç‚¹å¯è§
+    	line.widthCurve = AnimationCurve.Constant(0, 1, 1);
         line.startWidth = maxWidth;
-        line.endWidth = minWidth;
+    	line.endWidth = maxWidth;
     }
 
     void EraseLine()
@@ -138,23 +155,22 @@ public class TestLineRenderer : MonoBehaviour
         }
     }
 
-    Gradient GetBrushGradient()
-    {
-        Gradient gradient = new Gradient();
-        gradient.SetKeys(
-            new GradientColorKey[] {
-                new GradientColorKey(Color.black, 0.0f),
-                new GradientColorKey(new Color(0, 0, 0, 0.8f), 0.5f),
-                new GradientColorKey(new Color(0, 0, 0, 0), 1.0f)
-            },
-            new GradientAlphaKey[] {
-                new GradientAlphaKey(1.0f, 0.0f),
-                new GradientAlphaKey(0.8f, 0.5f),
-                new GradientAlphaKey(0.0f, 1.0f)
-            }
-        );
-        return gradient;
-    }
+   Gradient GetBrushGradient()
+{
+    Gradient gradient = new Gradient();
+    gradient.SetKeys(
+        new GradientColorKey[] {
+            new GradientColorKey(Color.black, 0.0f),
+            new GradientColorKey(Color.black, 1.0f)
+        },
+        new GradientAlphaKey[] {
+            new GradientAlphaKey(1.0f, 0.0f),
+            new GradientAlphaKey(1.0f, 1.0f)
+        }
+    );
+    return gradient;
+}
+
 
     Vector3 GetMouseWorldPos()
     {

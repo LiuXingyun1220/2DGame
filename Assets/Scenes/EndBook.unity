@@ -878,6 +878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneFrom: EndBook
   sceneToGo: Compass
+  trasitionType: 2
 --- !u!4 &241514935
 Transform:
   m_ObjectHideFlags: 0

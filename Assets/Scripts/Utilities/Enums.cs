@@ -12,3 +12,8 @@ public enum InventoryLocation
 {
     None,Player
 }
+
+public enum TransitionType
+{
+    None,BlackFacde,CloudFade
+}

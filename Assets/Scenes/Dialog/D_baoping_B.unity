@@ -259,6 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneFrom: D_baoping_B
   sceneToGo: HeatAndColdScene
+  trasitionType: 2
 --- !u!61 &2035521955
 BoxCollider2D:
   m_ObjectHideFlags: 0
