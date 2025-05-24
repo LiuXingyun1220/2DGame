@@ -13,7 +13,7 @@ public enum InventoryLocation
     None,Player
 }
 
-public enum TrasitionType
+public enum TransitionType
 {
-    None,BlackFacde
+    None,BlackFacde,CloudFade
 }

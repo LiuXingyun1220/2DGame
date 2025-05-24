@@ -8,7 +8,7 @@ public class Teleport : MonoBehaviour
 {
     public string sceneFrom;
     public string sceneToGo;
-    public TrasitionType trasitionType;
+    public TransitionType trasitionType;
 
     public void TeleportToScene()
     {
@@ -18,17 +18,16 @@ public class Teleport : MonoBehaviour
     }
 
     // 根据 transitionType 返回对应的 ITransitionStrategy
-    private ITransitionStrategy GetTransitionStrategy(TrasitionType trasitionType)
+    private ITransitionStrategy GetTransitionStrategy(TransitionType trasitionType)
     {
         switch (trasitionType)
         {
-            case TrasitionType.BlackFacde:
-                return new BlackFadeStartegy(1f);
-            //case TransitionType.Slide:
-            //    return new SlideTransitionStrategy(1f, new Vector2(1000, 0), Vector2.zero); // 滑动过渡
-            //// 可以添加更多策略
+            case TransitionType.BlackFacde:
+                return new BlackFadeStrategy();
+            case TransitionType.CloudFade:
+                return new CloudFadeStrategy();
             default:
-                return new BlackFadeStartegy(1f); // 默认使用淡入淡出
+                return new BlackFadeStrategy(); // 默认使用淡入淡出
         }
     }
 }

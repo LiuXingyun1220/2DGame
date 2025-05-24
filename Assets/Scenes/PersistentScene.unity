@@ -778,26 +778,26 @@ MonoBehaviour:
   musicSounds:
   - name: start
     clip: {fileID: 8300000, guid: 7f2be1f092dfd234dae3cf271adfb84d, type: 3}
-    volume: 0.5
+    volume: 0.25
   - name: compass
     clip: {fileID: 8300000, guid: c3c7a3b2cdfba5742bc6f877264fe4af, type: 3}
-    volume: 0.5
+    volume: 0.25
   - name: cartoon
     clip: {fileID: 8300000, guid: 6fb0197bb559d734b8bdab961f60d1ea, type: 3}
-    volume: 0.5
+    volume: 0.25
   - name: game
     clip: {fileID: 8300000, guid: 6fb0197bb559d734b8bdab961f60d1ea, type: 3}
-    volume: 0.5
+    volume: 0.25
   sfxSounds:
   - name: bookflip
     clip: {fileID: 8300000, guid: c01ff61073b85bc4c929dc928941cc45, type: 3}
-    volume: 0.7
+    volume: 0.5
   - name: heat
     clip: {fileID: 8300000, guid: 1d44a1b263e464649bf936d9b03bc10a, type: 3}
-    volume: 0.7
+    volume: 0.5
   - name: broke
     clip: {fileID: 8300000, guid: ad7376bbeb9bb73489dbd6684b2fe00b, type: 3}
-    volume: 0.7
+    volume: 0.5
   musicSource: {fileID: 402539665}
   sfxSource: {fileID: 1587649713}
 --- !u!4 &846796923
@@ -1243,8 +1243,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFade: 0
-  fadeCanvasGroup: {fileID: 18439425}
-  fadeDuration: 1
+  fadePanel: {fileID: 18439423}
+  fadeDuration: 1.5
+  cloudGroup: {fileID: 1259151737}
 --- !u!4 &1810795112
 Transform:
   m_ObjectHideFlags: 0
