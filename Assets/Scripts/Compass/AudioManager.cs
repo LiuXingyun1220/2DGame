@@ -37,19 +37,18 @@ public class AudioManager : Singleton<AudioManager>
     // 播放音乐的方法，参数为音乐名称
     public void PlayMusic(string name)
     {
-        // 从音乐Sounds数组中找到名字匹配的Sound对象
         Sound s = Array.Find(musicSounds, x => x.name == name);
-        // 如果找不到对应的Sound，输出错误信息
         if (s == null || s.clip == null)
         {
             Debug.LogError("未找到音乐：" + name);
             return;
         }
-        // 否则将音乐源的clip设置为对应Sound的clip并播放
+
         musicSource.clip = s.clip;
         musicSource.volume = s.volume;
         musicSource.Play();
     }
+
 
     // 播放音效的方法，参数为音效名称
     public void PlaySFX(string name)

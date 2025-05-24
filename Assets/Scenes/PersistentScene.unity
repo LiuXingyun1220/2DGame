@@ -723,6 +723,9 @@ MonoBehaviour:
   - name: broke
     clip: {fileID: 8300000, guid: ad7376bbeb9bb73489dbd6684b2fe00b, type: 3}
     volume: 0.7
+  - name: boat
+    clip: {fileID: 8300000, guid: 3d951188bc8893f46bdaa60dc0547019, type: 3}
+    volume: 0.7
   musicSource: {fileID: 402539665}
   sfxSource: {fileID: 1587649713}
 --- !u!4 &846796923
@@ -1140,7 +1143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1811660340
 Transform:
   m_ObjectHideFlags: 0
