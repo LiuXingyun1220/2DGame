@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 250f;
     private Rigidbody2D rb;
     private RiverBoundary riverBoundary;
+    private bool isMoving = false;
 
     void Start()
     {
@@ -26,6 +27,10 @@ public class PlayerController : MonoBehaviour
 
         // 检查角色是否在河流区域内
         CheckBoundary();
+
+        // 判断角色是否静止并播放音效
+        CheckMovementState();
+
     }
 
     void CheckBoundary()
@@ -34,6 +39,19 @@ public class PlayerController : MonoBehaviour
         if (!riverBoundary.collider.bounds.Contains(transform.position))
         {
             transform.position = closestPoint;
+        }
+    }
+    void CheckMovementState()
+    {
+        bool currentlyMoving = rb.velocity.magnitude > 0;
+
+        if (currentlyMoving != isMoving) // 仅当状态变化时播放音效
+        {
+            isMoving = currentlyMoving;
+            if (isMoving)
+            {
+                AudioManager.instance.PlaySFX("boat");
+            }
         }
     }
 }
