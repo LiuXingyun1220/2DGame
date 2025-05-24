@@ -388,7 +388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneFrom: MainMenu
   sceneToGo: Book
-  trasitionType: 2
+  trasitionType: 3
 --- !u!82 &487420678
 AudioSource:
   m_ObjectHideFlags: 0
