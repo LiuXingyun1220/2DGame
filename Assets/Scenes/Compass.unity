@@ -3790,6 +3790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneFrom: Compass
   sceneToGo: AI
+  trasitionType: 2
 --- !u!4 &1921451753
 Transform:
   m_ObjectHideFlags: 0

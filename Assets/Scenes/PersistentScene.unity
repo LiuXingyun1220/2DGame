@@ -798,6 +798,9 @@ MonoBehaviour:
   - name: broke
     clip: {fileID: 8300000, guid: ad7376bbeb9bb73489dbd6684b2fe00b, type: 3}
     volume: 0.5
+  - name: boat
+    clip: {fileID: 8300000, guid: 3d951188bc8893f46bdaa60dc0547019, type: 3}
+    volume: 0.5
   musicSource: {fileID: 402539665}
   sfxSource: {fileID: 1587649713}
 --- !u!4 &846796923
