@@ -9,17 +9,15 @@ public class LevelTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // 确保只有 "Player" 碰到后才触发关卡跳转
         if (other.CompareTag("Player"))
         {
             Debug.Log("玩家触碰到关卡目标: " + levelName);
 
-            // 检查目标关卡是否已解锁
             if (LevelComplete.Instance.IsLevelUnlocked(levelName))
             {
-                // 使用 TransitionManager 进行场景过渡
+                TransitionManager.Instance.SetTransitionStrategy(new LoadingBarStrategy());
                 TransitionManager.Instance.Transition(SceneManager.GetActiveScene().name, levelName);
-                //判断有没有镜头
+
                 Scene persistentScene = SceneManager.GetSceneByName("PersistentScene");
                 if (!persistentScene.IsValid())
                 {
@@ -29,8 +27,8 @@ public class LevelTrigger : MonoBehaviour
             else
             {
                 Debug.Log("关卡 " + levelName + " 未解锁，无法进入！");
-                // 可以在这里添加提示玩家的 UI 逻辑
             }
         }
     }
+
 }
