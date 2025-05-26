@@ -54,6 +54,8 @@ public class FragmentPanel : MonoBehaviour
         string targetScene = GetTargetSceneName(index);
         Debug.Log($"跳转到场景: {targetScene}");
         TransitionManager.Instance.Transition(SceneManager.GetActiveScene().name, targetScene);
+        SceneManager.LoadScene(targetScene);
+
     }
 
     // 获取场景名称
@@ -63,7 +65,7 @@ public class FragmentPanel : MonoBehaviour
         {
             case 0: return "HeatAndCold_Book";
             case 1: return "YuZui_Book";
-            case 2: return "Compass_Book";
+            case 2: return "Music_Book";
             default: return "Compass";
         }
     }
