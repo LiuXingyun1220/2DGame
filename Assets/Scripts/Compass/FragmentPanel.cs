@@ -53,8 +53,8 @@ public class FragmentPanel : MonoBehaviour
 
         string targetScene = GetTargetSceneName(index);
         Debug.Log($"跳转到场景: {targetScene}");
+        TransitionManager.Instance.SetTransitionStrategy(new BlackFadeStrategy());
         TransitionManager.Instance.Transition(SceneManager.GetActiveScene().name, targetScene);
-        SceneManager.LoadScene(targetScene);
 
     }
 
