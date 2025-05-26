@@ -7,6 +7,7 @@ public class CloudFadeStrategy : AbstractTransitionStrategy
 {
     protected override IEnumerator BeforeTransition(TransitionManager manager)
     {
+        manager.progressSlider.gameObject.SetActive(false);
         manager.cloudGroup.SetActive(false);
         yield return Fade(manager,1);
     }
