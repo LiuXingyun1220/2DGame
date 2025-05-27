@@ -42,10 +42,12 @@ public class GameBingoManager : MonoBehaviour
             Data.TimeElapsed = timer.GetTimeUsed();
         }
 
-        Data.FinalScore = Mathf.Max(0, 100 - Mathf.FloorToInt(Data.TimeElapsed)/6);
+        Data.FinalScore = Mathf.Max(0, 100 - Mathf.FloorToInt(Data.TimeElapsed)/8);
 
         if (succeedText != null){
-            succeedText.text = $"得分: {Data.FinalScore}";
+            //succeedText.text = $"得分: {Data.FinalScore}";
+	    //succeedText.text = $"<size=150>得分:</size> <size=250><b>{Data.FinalScore}</b></size>";
+		succeedText.text = $"<size=500><b>{Data.FinalScore}</b></size><size=100><voffset=-60>\u2005分</voffset></size>";
 	    Debug.Log($"游戏胜利，最终得分: {Data.FinalScore}");
 	}
 
