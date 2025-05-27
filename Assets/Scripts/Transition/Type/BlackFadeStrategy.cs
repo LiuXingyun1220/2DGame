@@ -9,6 +9,7 @@ public class BlackFadeStrategy : AbstractTransitionStrategy
 {
     protected override IEnumerator BeforeTransition(TransitionManager manager)
     {
+        manager.progressSlider.gameObject.SetActive(false);
         yield return Fade(manager,1);
     }
     protected override IEnumerator AfterTransition(TransitionManager manager)

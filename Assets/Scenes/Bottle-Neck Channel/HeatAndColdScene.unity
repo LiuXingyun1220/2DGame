@@ -1084,7 +1084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneFrom: HeatAndColdScene
   sceneToGo: D_baoping_E
-  trasitionType: 2
+  trasitionType: 3
 --- !u!61 &1602824045
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1467,7 +1467,7 @@ PrefabInstance:
     - target: {fileID: 3907223770991130211, guid: 6900727930fbb0d4680efded4f54b0de, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 0dcdb3b2d7f15134baae75c59e56ff5b, type: 2}
+      objectReference: {fileID: 11400000, guid: 7f636070fa144a0488d1299e23335d06, type: 2}
     - target: {fileID: 3907223770991130211, guid: 6900727930fbb0d4680efded4f54b0de, type: 3}
       propertyPath: m_fontSizeBase
       value: 100
@@ -1475,7 +1475,7 @@ PrefabInstance:
     - target: {fileID: 3907223770991130211, guid: 6900727930fbb0d4680efded4f54b0de, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 7736435013068680140, guid: 0dcdb3b2d7f15134baae75c59e56ff5b, type: 2}
+      objectReference: {fileID: 5711722846021063083, guid: 7f636070fa144a0488d1299e23335d06, type: 2}
     - target: {fileID: 3907223770991130211, guid: 6900727930fbb0d4680efded4f54b0de, type: 3}
       propertyPath: m_VerticalAlignment
       value: 512
