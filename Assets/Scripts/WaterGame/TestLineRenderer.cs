@@ -4,12 +4,11 @@ using System.Collections.Generic;
 public class TestLineRenderer : MonoBehaviour
 {
     public GameObject water;
-    public Material customBrushMaterial; // 添加此字段以在 Inspector 中设置材质
     private Vector3 lastPos;
     private List<LineRenderer> lines = new List<LineRenderer>();
     private List<List<BoxCollider2D>> collidersPerLine = new List<List<BoxCollider2D>>();
     private float eraseDistance = 0.5f;
-    private float minWidth = 3f, maxWidth = 3f; // 线条最细和最粗
+    private float minWidth = 0.05f, maxWidth = 0.3f; // 线条最细和最粗
     private float maxSpeed = 5f;
 
     void Start()
@@ -25,30 +24,19 @@ public class TestLineRenderer : MonoBehaviour
     }
 
     void CreateNewLine()
-{
-    LineRenderer newLine = new GameObject("Line").AddComponent<LineRenderer>();
-    newLine.transform.SetParent(transform);
-    newLine.positionCount = 0;
-    newLine.loop = false;
-
-    // 使用自定义材质（可在 Inspector 拖拽设置）
-    if (customBrushMaterial != null)
     {
-        newLine.material = new Material(customBrushMaterial);
-    }
-    else
-    {
+        LineRenderer newLine = new GameObject("Line").AddComponent<LineRenderer>();
+        newLine.transform.SetParent(transform);
+        newLine.positionCount = 0;
+        newLine.loop = false;
         newLine.material = new Material(Shader.Find("Sprites/Default"));
+        newLine.colorGradient = GetBrushGradient();
+        newLine.numCapVertices = 5;
+        newLine.widthMultiplier = 1f; // 让 `widthCurve` 生效
+
+        lines.Add(newLine);
+        collidersPerLine.Add(new List<BoxCollider2D>());
     }
-
-    newLine.colorGradient = GetBrushGradient();
-    //newLine.numCapVertices = 5;
-    newLine.numCapVertices = 0;
-    newLine.widthMultiplier = 1f;
-
-    lines.Add(newLine);
-    collidersPerLine.Add(new List<BoxCollider2D>());
-}
 
     void DrawLine()
     {
@@ -78,22 +66,17 @@ public class TestLineRenderer : MonoBehaviour
     /// </summary>
     void UpdateWidthCurve(LineRenderer line)
     {
-        //int pointCount = line.positionCount;
-        //if (pointCount < 2) return;
+        int pointCount = line.positionCount;
+        if (pointCount < 2) return;
 
-        //AnimationCurve widthCurve = new AnimationCurve();
-        //widthCurve.AddKey(0f, 1.0f); // 起点最粗
-        //widthCurve.AddKey(0.5f, 0.7f); // 中间稍微变细
-        //widthCurve.AddKey(1f, 0.1f); // 尾部变细
+        AnimationCurve widthCurve = new AnimationCurve();
+        widthCurve.AddKey(0f, 1.0f); // 起点最粗
+        widthCurve.AddKey(0.5f, 0.7f); // 中间稍微变细
+        widthCurve.AddKey(1f, 0.1f); // 尾部变细
 
-        //line.widthCurve = widthCurve;
-        //line.startWidth = maxWidth;
-        //line.endWidth = minWidth;
-
-	// 保持头尾一致宽度，确保起点终点可见
-    	line.widthCurve = AnimationCurve.Constant(0, 1, 1);
+        line.widthCurve = widthCurve;
         line.startWidth = maxWidth;
-    	line.endWidth = maxWidth;
+        line.endWidth = minWidth;
     }
 
     void EraseLine()
@@ -155,22 +138,23 @@ public class TestLineRenderer : MonoBehaviour
         }
     }
 
-   Gradient GetBrushGradient()
-{
-    Gradient gradient = new Gradient();
-    gradient.SetKeys(
-        new GradientColorKey[] {
-            new GradientColorKey(Color.black, 0.0f),
-            new GradientColorKey(Color.black, 1.0f)
-        },
-        new GradientAlphaKey[] {
-            new GradientAlphaKey(1.0f, 0.0f),
-            new GradientAlphaKey(1.0f, 1.0f)
-        }
-    );
-    return gradient;
-}
-
+    Gradient GetBrushGradient()
+    {
+        Gradient gradient = new Gradient();
+        gradient.SetKeys(
+            new GradientColorKey[] {
+                new GradientColorKey(Color.black, 0.0f),
+                new GradientColorKey(new Color(0, 0, 0, 0.8f), 0.5f),
+                new GradientColorKey(new Color(0, 0, 0, 0), 1.0f)
+            },
+            new GradientAlphaKey[] {
+                new GradientAlphaKey(1.0f, 0.0f),
+                new GradientAlphaKey(0.8f, 0.5f),
+                new GradientAlphaKey(0.0f, 1.0f)
+            }
+        );
+        return gradient;
+    }
 
     Vector3 GetMouseWorldPos()
     {
