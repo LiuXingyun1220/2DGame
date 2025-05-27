@@ -80,11 +80,11 @@ public class RockTemperature : MonoBehaviour
     // 在RockTemperature类中添加
     private GUIStyle debugStyle;
 
-    void OnGUI()
-    {
-        // 调整显示区域大小以适应新字体（宽度300，高度40）
-        GUI.Label(new Rect(10, 10, 300, 40),
-            $"温度: {currentTemperature:F1}",
-            debugStyle);
-    }
+    //void OnGUI()
+    //{
+    //    // 调整显示区域大小以适应新字体（宽度300，高度40）
+    //    GUI.Label(new Rect(10, 10, 300, 40),
+    //        $"温度: {currentTemperature:F1}",
+    //        debugStyle);
+    //}
 }
