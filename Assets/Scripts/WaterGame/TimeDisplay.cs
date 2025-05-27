@@ -12,7 +12,7 @@ public class TimerDisplay : MonoBehaviour
         if (isTiming)
         {
             timer += Time.deltaTime;
-            timeText.text = $"时间: {timer:F2}";
+            timeText.text = $"用时:{timer:F2}";
         }
     }
 
