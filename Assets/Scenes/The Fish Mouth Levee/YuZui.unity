@@ -229,7 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneFrom: YuZui
   sceneToGo: Compass
-  trasitionType: 2
+  trasitionType: 3
 --- !u!61 &44681745
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6274,8 +6274,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u8FDB\u5EA6\uFF1A0/5"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0dcdb3b2d7f15134baae75c59e56ff5b, type: 2}
-  m_sharedMaterial: {fileID: 7736435013068680140, guid: 0dcdb3b2d7f15134baae75c59e56ff5b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7f636070fa144a0488d1299e23335d06, type: 2}
+  m_sharedMaterial: {fileID: 5711722846021063083, guid: 7f636070fa144a0488d1299e23335d06, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6705,7 +6705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneFrom: YuZui
   sceneToGo: D_yuzui_E
-  trasitionType: 2
+  trasitionType: 3
 --- !u!61 &1986983825
 BoxCollider2D:
   m_ObjectHideFlags: 0
