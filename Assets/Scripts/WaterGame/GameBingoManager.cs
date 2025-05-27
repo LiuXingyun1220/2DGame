@@ -1,28 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameBingoManager : MonoBehaviour
 {
-    public GameObject gameBingoPanel; // 游戏胜利UI面板
-    public GameObject scoreUI;        // 分数UI对象
-    public int winScoreThreshold = 4; // 触发胜利的分数阈值
-    public GameObject background ;
-    //public GameObject Water;
-    //public GameObject DirtyWater;
+    public GameObject gameBingoPanel;
+    public GameObject scoreUI;
+    public GameObject background;
+    public GameObject timeUI;
+    public int winScoreThreshold = 4;
+    public TextMeshProUGUI succeedText; // GameBingoPanel 下的得分显示组件
 
     private bool isGameBingo = false;
 
     void Start()
     {
-        gameBingoPanel.SetActive(false); // 默认隐藏胜利UI
-        scoreUI.SetActive(true);         // 显示分数
+        Data.GameEnded = false;
+        gameBingoPanel.SetActive(false);
+        scoreUI.SetActive(true);
+        timeUI.SetActive(true);
     }
 
     void Update()
     {
-        if (!isGameBingo && Data.Score > winScoreThreshold)
+        if (!isGameBingo && !Data.GameEnded && Data.Score > winScoreThreshold)
         {
             background.SetActive(false);
             GameBingo();
@@ -32,13 +33,27 @@ public class GameBingoManager : MonoBehaviour
     void GameBingo()
     {
         isGameBingo = true;
-        //Water.SetActive(false);
-        //DirtyWater.SetActive(false);
-        gameBingoPanel.SetActive(true);  // 显示胜利UI
-        scoreUI.SetActive(false);        // 隐藏分数UI
+        Data.GameEnded = true;
+
+        TimerDisplay timer = FindObjectOfType<TimerDisplay>();
+        if (timer != null)
+        {
+            timer.StopTimer();
+            Data.TimeElapsed = timer.GetTimeUsed();
+        }
+
+        Data.FinalScore = Mathf.Max(0, 100 - Mathf.FloorToInt(Data.TimeElapsed)/6);
+
+        if (succeedText != null){
+            succeedText.text = $"得分: {Data.FinalScore}";
+	    Debug.Log($"游戏胜利，最终得分: {Data.FinalScore}");
+	}
+
+        gameBingoPanel.SetActive(true);
+        scoreUI.SetActive(false);
+        timeUI.SetActive(false);
     }
 
-    // 重新开始游戏
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

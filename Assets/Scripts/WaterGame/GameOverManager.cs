@@ -1,28 +1,29 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using TMPro;
 
 public class GameOverManager : MonoBehaviour
 {
-    public GameObject gameOverPanel; // 游戏结束UI面板
-    public GameObject scoreUI;       // 分数Text对象（例如“Score”）
+    public GameObject gameOverPanel; // 失败UI面板
+    public GameObject scoreUI;       // 游戏中分数UI
     public GameObject background;
-    ///public GameObject Water;
-    //public GameObject DirtyWater;
+    public GameObject timeUI;
+    public TextMeshProUGUI defeatText; // 失败面板下用于显示分数的Text
 
     private bool isGameOver = false;
 
     void Start()
     {
+        Data.GameEnded = false;
         Data.Score = 0;
         gameOverPanel.SetActive(false);
         scoreUI.SetActive(true);
+        timeUI.SetActive(true);
     }
 
     void Update()
     {
-        int score= Data.Score;
-        if (!isGameOver && score < 0)
+        if (!isGameOver && !Data.GameEnded && Data.Score < 0)  // 触发失败条件
         {
             background.SetActive(false);
             GameOver();
@@ -32,13 +33,28 @@ public class GameOverManager : MonoBehaviour
     void GameOver()
     {
         isGameOver = true;
-        //Water.SetActive(false);
-        //DirtyWater.SetActive(false);
-        gameOverPanel.SetActive(true);  // 显示Game Over
-        scoreUI.SetActive(false);       // 隐藏分数字
+        Data.GameEnded = true;
+
+        TimerDisplay timer = FindObjectOfType<TimerDisplay>();
+        if (timer != null)
+        {
+            timer.StopTimer();
+            Data.TimeElapsed = timer.GetTimeUsed();
+        }
+
+        Data.FinalScore = Mathf.Max(0, 100 - Mathf.FloorToInt(Data.TimeElapsed)/5);
+
+        if (defeatText != null)
+        {
+            defeatText.text = $"得分: {Data.FinalScore-20}";
+	    Debug.Log($"游戏失败，最终得分: {Data.FinalScore}");
+        }
+
+        gameOverPanel.SetActive(true);
+        scoreUI.SetActive(false);
+        timeUI.SetActive(false);
     }
 
-    // 重开按钮调用这个
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
