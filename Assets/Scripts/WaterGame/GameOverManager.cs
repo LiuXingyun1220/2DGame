@@ -42,11 +42,14 @@ public class GameOverManager : MonoBehaviour
             Data.TimeElapsed = timer.GetTimeUsed();
         }
 
-        Data.FinalScore = Mathf.Max(0, 100 - Mathf.FloorToInt(Data.TimeElapsed)/5);
+        //Data.FinalScore = Mathf.Max(0, 100 - Mathf.FloorToInt(Data.TimeElapsed)/5);
+	Data.FinalScore =20;
 
         if (defeatText != null)
         {
-            defeatText.text = $"得分: {Data.FinalScore-20}";
+            //defeatText.text = $"得分: {Data.FinalScore-20}";
+	    //defeatText.text = $"<size=100>得分:</size> <size=250><b>{Data.FinalScore-20}</b></size>";
+	    defeatText.text = $"<size=500><b>{Data.FinalScore - 20}</b></size><size=100><voffset=-60>\u2005分</voffset></size>";
 	    Debug.Log($"游戏失败，最终得分: {Data.FinalScore}");
         }
 
