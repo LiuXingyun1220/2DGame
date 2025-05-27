@@ -134,7 +134,7 @@ public class ScoreManager : MonoBehaviour
         }
         if (scoreText1 != null)
         {
-            scoreText1.text = $"ตรทึ: {currentScore}";
+            scoreText1.text = $" {currentScore}";
         }
     }
 

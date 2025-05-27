@@ -25,12 +25,12 @@ public class RhythmEventController : MonoBehaviour
         {
             levelCompleteUI.SetActive(true);
             Debug.Log("更新了");
-            // 查找并更新UI上的时间文本（如果有的话）
-            TextMeshProUGUI text = levelCompleteUI.GetComponentInChildren<TextMeshProUGUI>();
-            if (text.name.Contains("ScoreText"))
-            {
-                text.text = string.Format("Score: {0}", ScoreManager.Instance.getScore());
-            }
+
+            //TextMeshProUGUI text = levelCompleteUI.GetComponentInChildren<TextMeshProUGUI>();
+            //if (text.name.Contains("ScoreText"))
+            //{
+            //    text.text = string.Format("Score:{0}", ScoreManager.Instance.getScore());
+            //}
         }
         else 
         {
