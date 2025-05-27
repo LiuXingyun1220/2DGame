@@ -108,7 +108,7 @@ public class BookPro : MonoBehaviour
         float pageHeight = BookPanel.rect.height;
         
 
-        ClippingPlane.rectTransform.sizeDelta = new Vector2(pageWidth * 2 + pageHeight, pageHeight + pageHeight * 2);
+        ClippingPlane.rectTransform.sizeDelta = new Vector2(pageWidth * 2 + pageHeight, pageHeight + pageHeight * 4);
 
         //hypotenous (diagonal) page length
         float hyp = Mathf.Sqrt(pageWidth * pageWidth + pageHeight * pageHeight);
